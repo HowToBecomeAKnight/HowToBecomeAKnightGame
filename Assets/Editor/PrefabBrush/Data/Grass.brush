@@ -1,0 +1,23 @@
+Layer Selection: Default
+Brush Max Size: 10
+Brush Size: 9.28
+Fill Mode: True
+Fill Rate: 0.01
+
+Game Object: Assets/grass.blend
+Layer: Default
+Toggle: True
+Slider: 1
+Lock Orientation Toggle: False
+Random Rotation Toggle: True
+Random Rotation X: False
+Random Rotation Y: True
+Random Rotation Z: False
+Random Scale Toggle: True
+Random Scale Min: 1
+Random Scale Max: 10
+Fixed Rotation Toggle: True
+Fixed Rotation X: 90
+Fixed Rotation Y: 0
+Fixed Rotation Z: 0
+Depth: 0

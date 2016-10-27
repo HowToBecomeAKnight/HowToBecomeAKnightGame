@@ -1,0 +1,77 @@
+Layer Selection: Default
+Brush Max Size: 10
+Brush Size: 9.28
+Fill Mode: True
+Fill Rate: 0.314
+
+Game Object: Assets/Poly/Geom Art Pack/Prefabs/Fir2_summer.prefab
+Layer: Default
+Toggle: True
+Slider: 1
+Lock Orientation Toggle: True
+Random Rotation Toggle: True
+Random Rotation X: False
+Random Rotation Y: True
+Random Rotation Z: False
+Random Scale Toggle: True
+Random Scale Min: 5
+Random Scale Max: 7
+Fixed Rotation Toggle: False
+Fixed Rotation X: 0
+Fixed Rotation Y: 0
+Fixed Rotation Z: 0
+Depth: 0
+
+Game Object: Assets/Poly/Geom Art Pack/Prefabs/Fir_summer.prefab
+Layer: Default
+Toggle: True
+Slider: 1
+Lock Orientation Toggle: True
+Random Rotation Toggle: True
+Random Rotation X: False
+Random Rotation Y: True
+Random Rotation Z: False
+Random Scale Toggle: True
+Random Scale Min: 5
+Random Scale Max: 7
+Fixed Rotation Toggle: False
+Fixed Rotation X: 0
+Fixed Rotation Y: 0
+Fixed Rotation Z: 0
+Depth: 0
+
+Game Object: Assets/Poly/Geom Art Pack/Prefabs/leaf_summer.prefab
+Layer: Default
+Toggle: True
+Slider: 1
+Lock Orientation Toggle: True
+Random Rotation Toggle: True
+Random Rotation X: False
+Random Rotation Y: True
+Random Rotation Z: False
+Random Scale Toggle: True
+Random Scale Min: 3
+Random Scale Max: 6
+Fixed Rotation Toggle: False
+Fixed Rotation X: 0
+Fixed Rotation Y: 0
+Fixed Rotation Z: 0
+Depth: 0
+
+Game Object: Assets/Poly/Geom Art Pack/Prefabs/leafs_summer.prefab
+Layer: Default
+Toggle: True
+Slider: 1
+Lock Orientation Toggle: True
+Random Rotation Toggle: True
+Random Rotation X: False
+Random Rotation Y: True
+Random Rotation Z: False
+Random Scale Toggle: True
+Random Scale Min: 3
+Random Scale Max: 7
+Fixed Rotation Toggle: False
+Fixed Rotation X: 0
+Fixed Rotation Y: 0
+Fixed Rotation Z: 0
+Depth: 0
