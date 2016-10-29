@@ -1,6 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2015
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HowToBecomeAKnightGame.CSharp.Plugins", "HowToBecomeAKnightGame.CSharp.Plugins.csproj", "{92C5F7F7-3D38-B112-672F-885D475859D0}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HowToBecomeAKnightGame.CSharp", "HowToBecomeAKnightGame.CSharp.csproj", "{16AC09BC-8C2A-4C6E-62F7-D60D65308407}"
