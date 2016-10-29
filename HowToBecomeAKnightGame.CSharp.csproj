@@ -80,6 +80,7 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\Animations.cs" />
     <Compile Include="Assets\Scripts\LoadDungeon1.cs" />
+    <Compile Include="Assets\Scripts\LoadForestHub.cs" />
     <Compile Include="Assets\Scripts\NormalMovement.cs" />
     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
   </ItemGroup>
