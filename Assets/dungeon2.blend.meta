@@ -1,0 +1,207 @@
+fileFormatVersion: 2
+guid: ac41ce876c5a8ed43a9180fd9ca46a2c
+timeCreated: 1478299436
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Cube_000
+    100002: Cube_001
+    100004: Cube_002
+    100006: Cube_003
+    100008: Cube_004
+    100010: Cube_005
+    100012: Cube_006
+    100014: Cube_007
+    100016: Cube_008
+    100018: Cube_009
+    100020: Cube_010
+    100022: Cube_036
+    100024: //RootNode
+    100026: house_026
+    100028: Icosphere_000
+    100030: Icosphere_001
+    100032: Icosphere_002
+    100034: Icosphere_003
+    100036: Icosphere_004
+    100038: Icosphere_005
+    100040: Icosphere_006
+    100042: Icosphere_007
+    100044: Icosphere_008
+    400000: Cube_000
+    400002: Cube_001
+    400004: Cube_002
+    400006: Cube_003
+    400008: Cube_004
+    400010: Cube_005
+    400012: Cube_006
+    400014: Cube_007
+    400016: Cube_008
+    400018: Cube_009
+    400020: Cube_010
+    400022: Cube_036
+    400024: //RootNode
+    400026: house_026
+    400028: Icosphere_000
+    400030: Icosphere_001
+    400032: Icosphere_002
+    400034: Icosphere_003
+    400036: Icosphere_004
+    400038: Icosphere_005
+    400040: Icosphere_006
+    400042: Icosphere_007
+    400044: Icosphere_008
+    2300000: Cube_000
+    2300002: Cube_001
+    2300004: Cube_002
+    2300006: Cube_003
+    2300008: Cube_004
+    2300010: Cube_005
+    2300012: Cube_006
+    2300014: Cube_007
+    2300016: Cube_008
+    2300018: Cube_009
+    2300020: Cube_010
+    2300022: Cube_036
+    2300024: house_026
+    2300026: Icosphere_000
+    2300028: Icosphere_001
+    2300030: Icosphere_002
+    2300032: Icosphere_003
+    2300034: Icosphere_004
+    2300036: Icosphere_005
+    2300038: Icosphere_006
+    2300040: Icosphere_007
+    2300042: Icosphere_008
+    3300000: Cube_000
+    3300002: Cube_001
+    3300004: Cube_002
+    3300006: Cube_003
+    3300008: Cube_004
+    3300010: Cube_005
+    3300012: Cube_006
+    3300014: Cube_007
+    3300016: Cube_008
+    3300018: Cube_009
+    3300020: Cube_010
+    3300022: Cube_036
+    3300024: house_026
+    3300026: Icosphere_000
+    3300028: Icosphere_001
+    3300030: Icosphere_002
+    3300032: Icosphere_003
+    3300034: Icosphere_004
+    3300036: Icosphere_005
+    3300038: Icosphere_006
+    3300040: Icosphere_007
+    3300042: Icosphere_008
+    4300000: Icosphere_008
+    4300002: Icosphere_007
+    4300004: Icosphere_005
+    4300006: Icosphere_004
+    4300008: Icosphere_003
+    4300010: Icosphere_002
+    4300012: Icosphere_001
+    4300014: Icosphere_000
+    4300016: Cube_010
+    4300018: Cube_007
+    4300020: Cube_006
+    4300022: Cube_009
+    4300024: Cube_008
+    4300026: Cube_005
+    4300028: Cube_004
+    4300030: Cube_003
+    4300032: Cube_002
+    4300034: Cube_001
+    4300036: Cube_000
+    4300038: Cube_036
+    4300040: Icosphere_006
+    4300042: house_026
+    6400000: Cube_000
+    6400002: Cube_001
+    6400004: Cube_002
+    6400006: Cube_003
+    6400008: Cube_004
+    6400010: Cube_005
+    6400012: Cube_006
+    6400014: Cube_007
+    6400016: Cube_008
+    6400018: Cube_009
+    6400020: Cube_010
+    6400022: Cube_036
+    6400024: house_026
+    6400026: Icosphere_000
+    6400028: Icosphere_001
+    6400030: Icosphere_002
+    6400032: Icosphere_003
+    6400034: Icosphere_004
+    6400036: Icosphere_005
+    6400038: Icosphere_006
+    6400040: Icosphere_007
+    6400042: Icosphere_008
+    7400000: Default Take
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 1
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
