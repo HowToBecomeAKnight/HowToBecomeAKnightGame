@@ -11,9 +11,15 @@ public class HelliephantAI : EnemyAI
 
     float distanceToPlayer;
 
+    CapsuleCollider capsuleCollider;
+
+    Rigidbody rigidBody;
+
     // Use this for initialization
     protected override void Start () {
         animator = GetComponent<Animator>();
+        capsuleCollider = GetComponent<CapsuleCollider>();
+        rigidBody = GetComponent<Rigidbody>();
         base.Start();
 
     }
@@ -23,10 +29,19 @@ public class HelliephantAI : EnemyAI
     {
         distanceToPlayer = Vector3.Distance(transform.position, player.transform.position);
 
-        if (distanceToPlayer < 15)
+        if (distanceToPlayer < 15 && !isDead)
         {
             animator.SetTrigger("Chase");
             MoveEnemy(player.position);
+        }
+
+        if (Health == 0.0f && !isDead)
+        {
+            Death();
+            base.NavMesh.Stop();
+            rigidBody.isKinematic = true;
+            capsuleCollider.isTrigger = true;
+
         }
     }
 
@@ -34,5 +49,14 @@ public class HelliephantAI : EnemyAI
     {
         isDead = true;
         animator.SetTrigger("Die");
+    }
+
+    void OnCollisionEnter(Collision col)
+    {
+        if (col.gameObject.CompareTag("Weapon"))
+        {
+            print("HIT");
+            Health = 0.0f;
+        }
     }
 }

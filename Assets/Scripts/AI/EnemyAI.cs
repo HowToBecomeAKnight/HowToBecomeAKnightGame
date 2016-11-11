@@ -28,4 +28,16 @@ public abstract class EnemyAI : MonoBehaviour {
     {
         navMesh.SetDestination(position);
     }
+
+    public NavMeshAgent NavMesh
+    {
+        get
+        {
+            return this.navMesh;
+        }
+        set
+        {
+            this.navMesh = value;
+        }
+    }
 }

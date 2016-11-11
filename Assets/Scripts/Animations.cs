@@ -6,12 +6,16 @@ public class Animations : MonoBehaviour
 
     Animator anim;
 
+    BoxCollider collider;
+
     // Use this for initialization
     void Start()
     {
-
         anim = GetComponent<Animator>();
-
+        var weapon = GameObject.FindWithTag("Weapon");
+        collider = weapon.GetComponent<BoxCollider>();
+        //Disable the collider on the weapon untill the player swings it
+        collider.isTrigger = true;
     }
 
     // Update is called once per frame
@@ -20,6 +24,7 @@ public class Animations : MonoBehaviour
 
         if (Input.GetMouseButtonDown(0))// 
         {
+            collider.isTrigger = false;
             anim.SetTrigger("Attack");
             Debug.Log("Attack");
         }
@@ -36,5 +41,10 @@ public class Animations : MonoBehaviour
             anim.SetTrigger("Jump");
             Debug.Log("Jump");
         }
+    }
+
+    public void AttackDone()
+    {
+        collider.isTrigger = true;
     }
 }
