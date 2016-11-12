@@ -1,11 +1,12 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class HelliephantAI : EnemyAI
+public class HelliephantAI : EnemyAI, EnemyInterface
 {
     Animator animator;
 
-    float Health = 100.0f;
+    public float maxHealth = 100.0f;
+    float currHealth;
 
     bool isDead = false;
 
@@ -20,6 +21,7 @@ public class HelliephantAI : EnemyAI
         animator = GetComponent<Animator>();
         capsuleCollider = GetComponent<CapsuleCollider>();
         rigidBody = GetComponent<Rigidbody>();
+        currHealth = maxHealth;
         base.Start();
 
     }
@@ -35,7 +37,7 @@ public class HelliephantAI : EnemyAI
             MoveEnemy(player.position);
         }
 
-        if (Health == 0.0f && !isDead)
+        if (currHealth == 0.0f && !isDead)
         {
             Death();
             base.NavMesh.Stop();
@@ -56,7 +58,17 @@ public class HelliephantAI : EnemyAI
         if (col.gameObject.CompareTag("Weapon"))
         {
             print("HIT");
-            Health = 0.0f;
+            currHealth -= 25.0f;
         }
+    }
+
+    public float getCurrHealth()
+    {
+        return currHealth;
+    }
+
+    public float getMaxHealth()
+    {
+        return maxHealth;
     }
 }

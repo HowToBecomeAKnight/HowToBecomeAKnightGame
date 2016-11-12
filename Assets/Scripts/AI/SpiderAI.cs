@@ -1,12 +1,12 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class SpiderAI : EnemyAI {
+public class SpiderAI : EnemyAI, EnemyInterface {
 
     Animator animator;
 
-    float Health = 100.0f;
-
+    public float maxHealth = 100.0f;
+    float currHealth;
     bool isDead = false;
 
     BoxCollider boxCollider;
@@ -18,6 +18,7 @@ public class SpiderAI : EnemyAI {
         animator = GetComponent<Animator>();
         boxCollider = GetComponent<BoxCollider>();
         rigidBody = GetComponent<Rigidbody>();
+        currHealth = maxHealth;
         base.Start();
     }
 	
@@ -25,7 +26,7 @@ public class SpiderAI : EnemyAI {
 	protected override void Update () {
         base.Update();
 
-        if (Health == 0.0f && !isDead)
+        if (currHealth == 0.0f && !isDead)
         {
             base.NavMesh.Stop();
             rigidBody.isKinematic = true;
@@ -52,12 +53,22 @@ public class SpiderAI : EnemyAI {
         if (col.gameObject.CompareTag("Weapon"))
         {
             print("HIT");
-            Health = 0.0f;
+            currHealth -= 25.0f;
         }
     }
 
     void Death()
     {
         isDead = true;
+    }
+
+    public float getCurrHealth()
+    {
+        return currHealth;
+    }
+
+    public float getMaxHealth()
+    {
+        return maxHealth;
     }
 }

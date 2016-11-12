@@ -1,13 +1,14 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class SkeletonAI : EnemyAI {
+public class SkeletonAI : EnemyAI, EnemyInterface {
 
     Animator animator;
 
     bool isDead = false;
 
-    float Health = 100.0f;
+    public float maxHealth = 100.0f;
+    float currHealth;
 
     float distanceToPlayer;
 
@@ -22,6 +23,7 @@ public class SkeletonAI : EnemyAI {
         animator = GetComponent<Animator>();
         capsuleCollider = GetComponent<CapsuleCollider>();
         rigidBody = GetComponent<Rigidbody>();
+        currHealth = maxHealth;
         base.Start();
         base.NavMesh.Stop();
     }
@@ -51,7 +53,7 @@ public class SkeletonAI : EnemyAI {
             animator.SetTrigger("Attack");
         }
 
-        if (Health == 0.0f && !isDead && isAlive)
+        if (currHealth == 0.0f && !isDead && isAlive)
         {
             Death();
             base.NavMesh.Stop();
@@ -71,7 +73,7 @@ public class SkeletonAI : EnemyAI {
         if (col.gameObject.CompareTag("Weapon"))
         {
             print("HIT");
-            Health = 0.0f;
+            currHealth -= 25.0f;
         }
     }
 
@@ -79,5 +81,15 @@ public class SkeletonAI : EnemyAI {
     {
         isDead = true;
         animator.SetTrigger("Die");
+    }
+
+    public float getCurrHealth()
+    {
+        return currHealth;
+    }
+
+    public float getMaxHealth()
+    {
+        return maxHealth;
     }
 }
