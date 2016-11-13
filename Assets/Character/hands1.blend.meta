@@ -68,13 +68,593 @@ ModelImporter:
     animationScaleError: 0.5
     animationWrapMode: 0
     extraExposedTransformPaths: []
-    clipAnimations: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Default Take
+      takeName: Default Take
+      firstFrame: 0
+      lastFrame: 358
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: hand_L
+        weight: 1
+      - path: hand_L/palm_L
+        weight: 1
+      - path: hand_L/palm_L/lowFinger_L
+        weight: 1
+      - path: hand_L/palm_L/lowFinger_L/midFinger_L
+        weight: 1
+      - path: hand_L/palm_L/lowFinger_L/midFinger_L/upperFinger_L
+        weight: 1
+      - path: hand_L/palm_L/lowThumb_L
+        weight: 1
+      - path: hand_L/palm_L/lowThumb_L/upperThumb_L
+        weight: 1
+      - path: hand_L/palm_L_001
+        weight: 1
+      - path: hand_L/palm_L_001/lowFinger_L_001
+        weight: 1
+      - path: hand_L/palm_L_001/lowFinger_L_001/midFinger_L_001
+        weight: 1
+      - path: hand_L/palm_L_001/lowFinger_L_001/midFinger_L_001/upperFinger_L_001
+        weight: 1
+      - path: hand_L/palm_L_001/lowThumb_L_001
+        weight: 1
+      - path: hand_L/palm_L_001/lowThumb_L_001/upperThumb_L_001
+        weight: 1
+      - path: hand_L_001
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Backpedal
+      takeName: Backpedal
+      firstFrame: 159
+      lastFrame: 191
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: hand_L
+        weight: 1
+      - path: hand_L/palm_L
+        weight: 1
+      - path: hand_L/palm_L/lowFinger_L
+        weight: 1
+      - path: hand_L/palm_L/lowFinger_L/midFinger_L
+        weight: 1
+      - path: hand_L/palm_L/lowFinger_L/midFinger_L/upperFinger_L
+        weight: 1
+      - path: hand_L/palm_L/lowThumb_L
+        weight: 1
+      - path: hand_L/palm_L/lowThumb_L/upperThumb_L
+        weight: 1
+      - path: hand_L/palm_L_001
+        weight: 1
+      - path: hand_L/palm_L_001/lowFinger_L_001
+        weight: 1
+      - path: hand_L/palm_L_001/lowFinger_L_001/midFinger_L_001
+        weight: 1
+      - path: hand_L/palm_L_001/lowFinger_L_001/midFinger_L_001/upperFinger_L_001
+        weight: 1
+      - path: hand_L/palm_L_001/lowThumb_L_001
+        weight: 1
+      - path: hand_L/palm_L_001/lowThumb_L_001/upperThumb_L_001
+        weight: 1
+      - path: hand_L_001
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 159
+    - serializedVersion: 16
+      name: Idle
+      takeName: Idle
+      firstFrame: 0
+      lastFrame: 63
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: hand_L
+        weight: 1
+      - path: hand_L/palm_L
+        weight: 1
+      - path: hand_L/palm_L/lowFinger_L
+        weight: 1
+      - path: hand_L/palm_L/lowFinger_L/midFinger_L
+        weight: 1
+      - path: hand_L/palm_L/lowFinger_L/midFinger_L/upperFinger_L
+        weight: 1
+      - path: hand_L/palm_L/lowThumb_L
+        weight: 1
+      - path: hand_L/palm_L/lowThumb_L/upperThumb_L
+        weight: 1
+      - path: hand_L/palm_L_001
+        weight: 1
+      - path: hand_L/palm_L_001/lowFinger_L_001
+        weight: 1
+      - path: hand_L/palm_L_001/lowFinger_L_001/midFinger_L_001
+        weight: 1
+      - path: hand_L/palm_L_001/lowFinger_L_001/midFinger_L_001/upperFinger_L_001
+        weight: 1
+      - path: hand_L/palm_L_001/lowThumb_L_001
+        weight: 1
+      - path: hand_L/palm_L_001/lowThumb_L_001/upperThumb_L_001
+        weight: 1
+      - path: hand_L_001
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Idle_no_sword
+      takeName: Idle_no_sword
+      firstFrame: 229
+      lastFrame: 292
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: hand_L
+        weight: 1
+      - path: hand_L/palm_L
+        weight: 1
+      - path: hand_L/palm_L/lowFinger_L
+        weight: 1
+      - path: hand_L/palm_L/lowFinger_L/midFinger_L
+        weight: 1
+      - path: hand_L/palm_L/lowFinger_L/midFinger_L/upperFinger_L
+        weight: 1
+      - path: hand_L/palm_L/lowThumb_L
+        weight: 1
+      - path: hand_L/palm_L/lowThumb_L/upperThumb_L
+        weight: 1
+      - path: hand_L/palm_L_001
+        weight: 1
+      - path: hand_L/palm_L_001/lowFinger_L_001
+        weight: 1
+      - path: hand_L/palm_L_001/lowFinger_L_001/midFinger_L_001
+        weight: 1
+      - path: hand_L/palm_L_001/lowFinger_L_001/midFinger_L_001/upperFinger_L_001
+        weight: 1
+      - path: hand_L/palm_L_001/lowThumb_L_001
+        weight: 1
+      - path: hand_L/palm_L_001/lowThumb_L_001/upperThumb_L_001
+        weight: 1
+      - path: hand_L_001
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 229
+    - serializedVersion: 16
+      name: Jump
+      takeName: Jump
+      firstFrame: 129
+      lastFrame: 156
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: hand_L
+        weight: 1
+      - path: hand_L/palm_L
+        weight: 1
+      - path: hand_L/palm_L/lowFinger_L
+        weight: 1
+      - path: hand_L/palm_L/lowFinger_L/midFinger_L
+        weight: 1
+      - path: hand_L/palm_L/lowFinger_L/midFinger_L/upperFinger_L
+        weight: 1
+      - path: hand_L/palm_L/lowThumb_L
+        weight: 1
+      - path: hand_L/palm_L/lowThumb_L/upperThumb_L
+        weight: 1
+      - path: hand_L/palm_L_001
+        weight: 1
+      - path: hand_L/palm_L_001/lowFinger_L_001
+        weight: 1
+      - path: hand_L/palm_L_001/lowFinger_L_001/midFinger_L_001
+        weight: 1
+      - path: hand_L/palm_L_001/lowFinger_L_001/midFinger_L_001/upperFinger_L_001
+        weight: 1
+      - path: hand_L/palm_L_001/lowThumb_L_001
+        weight: 1
+      - path: hand_L/palm_L_001/lowThumb_L_001/upperThumb_L_001
+        weight: 1
+      - path: hand_L_001
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: pick_up
+      takeName: pick_up
+      firstFrame: 219
+      lastFrame: 242
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: hand_L
+        weight: 1
+      - path: hand_L/palm_L
+        weight: 1
+      - path: hand_L/palm_L/lowFinger_L
+        weight: 1
+      - path: hand_L/palm_L/lowFinger_L/midFinger_L
+        weight: 1
+      - path: hand_L/palm_L/lowFinger_L/midFinger_L/upperFinger_L
+        weight: 1
+      - path: hand_L/palm_L/lowThumb_L
+        weight: 1
+      - path: hand_L/palm_L/lowThumb_L/upperThumb_L
+        weight: 1
+      - path: hand_L/palm_L_001
+        weight: 1
+      - path: hand_L/palm_L_001/lowFinger_L_001
+        weight: 1
+      - path: hand_L/palm_L_001/lowFinger_L_001/midFinger_L_001
+        weight: 1
+      - path: hand_L/palm_L_001/lowFinger_L_001/midFinger_L_001/upperFinger_L_001
+        weight: 1
+      - path: hand_L/palm_L_001/lowThumb_L_001
+        weight: 1
+      - path: hand_L/palm_L_001/lowThumb_L_001/upperThumb_L_001
+        weight: 1
+      - path: hand_L_001
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: pull_lever
+      takeName: pull_lever
+      firstFrame: 129
+      lastFrame: 161
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: hand_L
+        weight: 1
+      - path: hand_L/palm_L
+        weight: 1
+      - path: hand_L/palm_L/lowFinger_L
+        weight: 1
+      - path: hand_L/palm_L/lowFinger_L/midFinger_L
+        weight: 1
+      - path: hand_L/palm_L/lowFinger_L/midFinger_L/upperFinger_L
+        weight: 1
+      - path: hand_L/palm_L/lowThumb_L
+        weight: 1
+      - path: hand_L/palm_L/lowThumb_L/upperThumb_L
+        weight: 1
+      - path: hand_L/palm_L_001
+        weight: 1
+      - path: hand_L/palm_L_001/lowFinger_L_001
+        weight: 1
+      - path: hand_L/palm_L_001/lowFinger_L_001/midFinger_L_001
+        weight: 1
+      - path: hand_L/palm_L_001/lowFinger_L_001/midFinger_L_001/upperFinger_L_001
+        weight: 1
+      - path: hand_L/palm_L_001/lowThumb_L_001
+        weight: 1
+      - path: hand_L/palm_L_001/lowThumb_L_001/upperThumb_L_001
+        weight: 1
+      - path: hand_L_001
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Run
+      takeName: Run
+      firstFrame: 69
+      lastFrame: 88
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: hand_L
+        weight: 1
+      - path: hand_L/palm_L
+        weight: 1
+      - path: hand_L/palm_L/lowFinger_L
+        weight: 1
+      - path: hand_L/palm_L/lowFinger_L/midFinger_L
+        weight: 1
+      - path: hand_L/palm_L/lowFinger_L/midFinger_L/upperFinger_L
+        weight: 1
+      - path: hand_L/palm_L/lowThumb_L
+        weight: 1
+      - path: hand_L/palm_L/lowThumb_L/upperThumb_L
+        weight: 1
+      - path: hand_L/palm_L_001
+        weight: 1
+      - path: hand_L/palm_L_001/lowFinger_L_001
+        weight: 1
+      - path: hand_L/palm_L_001/lowFinger_L_001/midFinger_L_001
+        weight: 1
+      - path: hand_L/palm_L_001/lowFinger_L_001/midFinger_L_001/upperFinger_L_001
+        weight: 1
+      - path: hand_L/palm_L_001/lowThumb_L_001
+        weight: 1
+      - path: hand_L/palm_L_001/lowThumb_L_001/upperThumb_L_001
+        weight: 1
+      - path: hand_L_001
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 69
+    - serializedVersion: 16
+      name: Slice_Attack
+      takeName: Slice_Attack
+      firstFrame: 98
+      lastFrame: 122
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: hand_L
+        weight: 1
+      - path: hand_L/palm_L
+        weight: 1
+      - path: hand_L/palm_L/lowFinger_L
+        weight: 1
+      - path: hand_L/palm_L/lowFinger_L/midFinger_L
+        weight: 1
+      - path: hand_L/palm_L/lowFinger_L/midFinger_L/upperFinger_L
+        weight: 1
+      - path: hand_L/palm_L/lowThumb_L
+        weight: 1
+      - path: hand_L/palm_L/lowThumb_L/upperThumb_L
+        weight: 1
+      - path: hand_L/palm_L_001
+        weight: 1
+      - path: hand_L/palm_L_001/lowFinger_L_001
+        weight: 1
+      - path: hand_L/palm_L_001/lowFinger_L_001/midFinger_L_001
+        weight: 1
+      - path: hand_L/palm_L_001/lowFinger_L_001/midFinger_L_001/upperFinger_L_001
+        weight: 1
+      - path: hand_L/palm_L_001/lowThumb_L_001
+        weight: 1
+      - path: hand_L/palm_L_001/lowThumb_L_001/upperThumb_L_001
+        weight: 1
+      - path: hand_L_001
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: stab_attack
+      takeName: stab_attack
+      firstFrame: 169
+      lastFrame: 211
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: hand_L
+        weight: 1
+      - path: hand_L/palm_L
+        weight: 1
+      - path: hand_L/palm_L/lowFinger_L
+        weight: 1
+      - path: hand_L/palm_L/lowFinger_L/midFinger_L
+        weight: 1
+      - path: hand_L/palm_L/lowFinger_L/midFinger_L/upperFinger_L
+        weight: 1
+      - path: hand_L/palm_L/lowThumb_L
+        weight: 1
+      - path: hand_L/palm_L/lowThumb_L/upperThumb_L
+        weight: 1
+      - path: hand_L/palm_L_001
+        weight: 1
+      - path: hand_L/palm_L_001/lowFinger_L_001
+        weight: 1
+      - path: hand_L/palm_L_001/lowFinger_L_001/midFinger_L_001
+        weight: 1
+      - path: hand_L/palm_L_001/lowFinger_L_001/midFinger_L_001/upperFinger_L_001
+        weight: 1
+      - path: hand_L/palm_L_001/lowThumb_L_001
+        weight: 1
+      - path: hand_L/palm_L_001/lowThumb_L_001/upperThumb_L_001
+        weight: 1
+      - path: hand_L_001
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
     isReadable: 1
   meshes:
     lODScreenPercentages: []
     globalScale: 1
     meshCompression: 0
-    addColliders: 0
+    addColliders: 1
     importBlendShapes: 1
     swapUVChannels: 0
     generateSecondaryUV: 0
