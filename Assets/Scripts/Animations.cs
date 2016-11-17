@@ -8,6 +8,8 @@ public class Animations : MonoBehaviour
     private CharacterController controller;
     BoxCollider collider;
     private bool onGround;
+    private bool weaponEqipped = true;
+    GameObject weapon;
 
     // Use this for initialization
     void Start()
@@ -17,7 +19,7 @@ public class Animations : MonoBehaviour
         //get controller on character
         controller = GetComponent<CharacterController>();
 
-        var weapon = GameObject.FindWithTag("Weapon");
+        weapon = GameObject.FindWithTag("Weapon");
         collider = weapon.GetComponent<BoxCollider>();
         //Disable the collider on the weapon untill the player swings it
         collider.isTrigger = true;
@@ -28,7 +30,7 @@ public class Animations : MonoBehaviour
     {
 
         //Left click attack, slice attack
-        if (Input.GetMouseButtonDown(0)) 
+        if (Input.GetMouseButtonDown(0) && weaponEqipped) 
         {
             collider.isTrigger = false;
             anim.SetTrigger("Slice Attack");
@@ -36,7 +38,7 @@ public class Animations : MonoBehaviour
         }
         
         //right click stab attack
-        else if (Input.GetMouseButtonDown(1))
+        else if (Input.GetMouseButtonDown(1) && weaponEqipped)
         {
             collider.isTrigger = false;
             anim.SetTrigger("Stab Attack");
@@ -81,6 +83,27 @@ public class Animations : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.F))
         {
             anim.SetTrigger("Pull Lever");
+        }
+
+        if(Input.GetKeyDown(KeyCode.G))
+        {
+            anim.SetTrigger("Pick Up");
+        }
+
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            if(weaponEqipped)
+            {
+                anim.SetBool("Equipped Weapon", false);
+                weapon.SetActive(false);
+                weaponEqipped = false;
+            }
+            else
+            {
+                anim.SetBool("Equipped Weapon", true);
+                weapon.SetActive(true);
+                weaponEqipped = true;
+            }
         }
         
     }
