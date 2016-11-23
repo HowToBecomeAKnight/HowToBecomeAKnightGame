@@ -12,6 +12,7 @@ public class leverOpenGate : MonoBehaviour {
     void Start() {
 
         anim = GetComponent<Animation>();
+        gate = GameObject.FindGameObjectWithTag("Gate");
         gateAnim = gate.GetComponent<Animation>();
 
     }
