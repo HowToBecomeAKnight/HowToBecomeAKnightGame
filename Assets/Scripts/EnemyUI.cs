@@ -30,7 +30,6 @@ public class EnemyUI : MonoBehaviour
                                         this.transform.position.y,
                                         player.position.z);
         transform.LookAt(targetPostition);
-        Debug.Log(script.getCurrHealth() / script.getMaxHealth());
         healthBar.fillAmount = (script.getCurrHealth()/script.getMaxHealth());
     }
 }
