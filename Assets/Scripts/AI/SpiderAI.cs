@@ -13,6 +13,10 @@ public class SpiderAI : EnemyAI, EnemyInterface {
 
     Rigidbody rigidBody;
 
+    private bool canTakeDamage = true;
+
+    private float damageWaitTime = 1.0f;
+
     // Use this for initialization
     protected override void Start () {
         animator = GetComponent<Animator>();
@@ -28,6 +32,7 @@ public class SpiderAI : EnemyAI, EnemyInterface {
 
         if (currHealth == 0.0f && !isDead)
         {
+            Death();
             base.NavMesh.Stop();
             rigidBody.isKinematic = true;
             boxCollider.isTrigger = true;
@@ -50,16 +55,18 @@ public class SpiderAI : EnemyAI, EnemyInterface {
             animator.SetTrigger("Chase");
         }
 
-        if (col.gameObject.CompareTag("Weapon"))
+        if (col.gameObject.CompareTag("Weapon") && canTakeDamage)
         {
             print("HIT");
             currHealth -= 25.0f;
+            StartCoroutine(damageDelay());
         }
     }
 
     void Death()
     {
         isDead = true;
+        animator.SetTrigger("Die");
     }
 
     public float getCurrHealth()
@@ -70,5 +77,12 @@ public class SpiderAI : EnemyAI, EnemyInterface {
     public float getMaxHealth()
     {
         return maxHealth;
+    }
+
+    IEnumerator damageDelay()
+    {
+        canTakeDamage = false;
+        yield return new WaitForSeconds(damageWaitTime);
+        canTakeDamage = true;
     }
 }
