@@ -13,31 +13,31 @@ public class Character : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-	    HealthBar.fillAmount = 1.0f;
+	    HealthBar.fillAmount = 1f;
     }
 	
 	// Update is called once per frame
 	void Update () {
     }
 
-    public void RemoveHealth(float amount)
+    public void RemoveHealth(int amount)
     {
         //TODO: do some sort of animation
         HealthBar.fillAmount -= amount;
     }
 
-    public void AddHealth(float amount)
+    public void AddHealth(int amount)
     {
         //TODO: do some sort of animation
         HealthBar.fillAmount += amount;
     }
 
-    void OnTriggerEnter(Collider col)
+    void OnCollisionEnter(Collision col)
     {
         if (col.gameObject.CompareTag("EnemyAttack") && canTakeDamage)
         {
             print("PLAYER HIT");
-            RemoveHealth(.1f);
+            RemoveHealth(10);
             StartCoroutine(damageDelay());
         }
     }

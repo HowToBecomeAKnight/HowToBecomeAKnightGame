@@ -9,7 +9,7 @@ public class SpiderAI : EnemyAI, EnemyInterface {
     float currHealth;
     bool isDead = false;
 
-    SphereCollider sphereCollider;
+    BoxCollider boxCollider;
 
     Rigidbody rigidBody;
 
@@ -20,7 +20,7 @@ public class SpiderAI : EnemyAI, EnemyInterface {
     // Use this for initialization
     protected override void Start () {
         animator = GetComponent<Animator>();
-        sphereCollider = GetComponent<SphereCollider>();
+        boxCollider = GetComponent<BoxCollider>();
         rigidBody = GetComponent<Rigidbody>();
         currHealth = maxHealth;
         base.Start();
@@ -35,7 +35,7 @@ public class SpiderAI : EnemyAI, EnemyInterface {
             Death();
             base.NavMesh.Stop();
             rigidBody.isKinematic = true;
-            sphereCollider.isTrigger = true;
+            boxCollider.isTrigger = true;
 
         }
     }
