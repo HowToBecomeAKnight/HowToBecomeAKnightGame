@@ -7,23 +7,34 @@ public class NormalMovement : MonoBehaviour
     private Vector3 movementVector;
     private CharacterController controller;
 
-    public float movementSpeed = 8;
+    public float movementSpeed = 10;
     public float jumpPower = 15;
     public float gravity = 40;
     public float rotateSpeed = 5f;
     private float rotate = 0.0f;
+
+    GameObject weapon;
+
+
     void Start()
     {
-
-
+        weapon = GameObject.FindWithTag("Weapon");
         controller = GetComponent<CharacterController>();
-
     }
 
     // Update is called once per frame
     void Update()
     {
         
+        if(!weapon.active)
+        {
+            movementSpeed = 25;
+        }
+        else
+        {
+            movementSpeed = 10;
+        }
+
         //for keyboard ---------------------------------------------------
         if (Input.GetKey(KeyCode.W))//move forward
         {
