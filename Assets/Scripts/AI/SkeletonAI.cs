@@ -18,6 +18,10 @@ public class SkeletonAI : EnemyAI, EnemyInterface {
 
     Rigidbody rigidBody;
 
+    private bool canTakeDamage = true;
+
+    private float damageWaitTime = 1.0f;
+
     // Use this for initialization
     protected override void Start () {
         animator = GetComponent<Animator>();
@@ -74,6 +78,7 @@ public class SkeletonAI : EnemyAI, EnemyInterface {
         {
             print("HIT");
             currHealth -= 25.0f;
+            StartCoroutine(damageDelay());
         }
     }
 
@@ -91,5 +96,12 @@ public class SkeletonAI : EnemyAI, EnemyInterface {
     public float getMaxHealth()
     {
         return maxHealth;
+    }
+
+    IEnumerator damageDelay()
+    {
+        canTakeDamage = false;
+        yield return new WaitForSeconds(damageWaitTime);
+        canTakeDamage = true;
     }
 }
