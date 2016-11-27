@@ -43,6 +43,11 @@ public class Character : MonoBehaviour {
         HealthBar.fillAmount += amount;
     }
 
+    public float GetHealth()
+    {
+        return HealthBar.fillAmount;
+    }
+
     void OnTriggerEnter(Collider col)
     {
         if(col.gameObject.CompareTag("Enemy"))

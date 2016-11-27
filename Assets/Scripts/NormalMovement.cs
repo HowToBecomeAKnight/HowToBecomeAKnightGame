@@ -26,7 +26,7 @@ public class NormalMovement : MonoBehaviour
     void Update()
     {
         
-        if(!weapon.active)
+        if(weapon && !weapon.active)
         {
             movementSpeed = 25;
         }

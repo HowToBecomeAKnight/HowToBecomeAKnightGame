@@ -15,6 +15,8 @@ public class ZombunnyAI : EnemyAI, EnemyInterface
 
     Rigidbody rigidBody;
 
+    private bool sinkEnemy = false;
+
     // Use this for initialization
     protected override void Start()
     {
@@ -35,8 +37,7 @@ public class ZombunnyAI : EnemyAI, EnemyInterface
             animator.SetTrigger("Chase");
             MoveEnemy(player.position);
         }
-
-        if(currHealth == 0.0f && !isDead)
+        if (currHealth == 0.0f && !isDead)
         {
             Death();
             base.NavMesh.Stop();
@@ -44,13 +45,17 @@ public class ZombunnyAI : EnemyAI, EnemyInterface
             capsuleCollider.isTrigger = true;
 
         }
+
+        if (sinkEnemy)
+        {
+            transform.Translate(-Vector3.up * 1.8f * Time.deltaTime);
+        }
     }
 
     void Death()
     {
         isDead = true;
-        animator.SetTrigger("Die");
-        
+        animator.SetTrigger("Die");        
     }
 
     void OnCollisionEnter(Collision col)
@@ -60,6 +65,14 @@ public class ZombunnyAI : EnemyAI, EnemyInterface
             print("HIT");
             currHealth -= 25.0f;
         }
+    }
+
+    void StartDestroy()
+    {
+        sinkEnemy = true;
+
+        // After 1.5 seconds destory the enemy.
+        Destroy(gameObject, 1.5f);
     }
 
     public float getCurrHealth()
