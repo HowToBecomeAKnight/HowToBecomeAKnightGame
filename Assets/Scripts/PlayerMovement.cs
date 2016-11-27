@@ -13,12 +13,10 @@ public class PlayerMovement : MonoBehaviour
     public float rotateSpeed = 5f;
     private float rotate = 0.0f;
     public GameObject camera;
+
     void Start()
     {
-
-        
         controller = GetComponent<CharacterController>();
-
     }
 
     // Update is called once per frame
@@ -58,7 +56,7 @@ public class PlayerMovement : MonoBehaviour
         if (controller.isGrounded)
         {
             movementVector.y = 0;
-
+           
             if (Input.GetKeyDown(KeyCode.Space))
             {
                 movementVector.y = jumpPower;

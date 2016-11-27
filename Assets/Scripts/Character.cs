@@ -9,17 +9,22 @@ public class Character : MonoBehaviour {
 
     private bool canTakeDamage = true;
 
-    private float damageWaitTime = 1.0f;
+    private float damageWaitTime = 0.7f;
 
     private GameObject player;
 
     public Transform checkPoint;
 
+    private NavMeshAgent agent;
+
     // Use this for initialization
     void Start () {
+        agent = GetComponentInChildren<NavMeshAgent>();
         player = GameObject.FindGameObjectWithTag("Player");
         checkPoint = GameObject.FindWithTag("StartSpawn").transform;
         HealthBar.fillAmount = 1.0f;
+
+        gameObject.GetComponent<NavMeshAgent>().enabled = false;
     }
 	
 	// Update is called once per frame
@@ -40,6 +45,11 @@ public class Character : MonoBehaviour {
 
     void OnTriggerEnter(Collider col)
     {
+        if(col.gameObject.CompareTag("Enemy"))
+        {
+            gameObject.GetComponent<NavMeshAgent>().enabled = true;
+        }
+
         if (col.gameObject.CompareTag("EnemyAttack") && canTakeDamage)
         {
             print("PLAYER HIT");
@@ -57,6 +67,15 @@ public class Character : MonoBehaviour {
             print("OutOfBounds");
             PlayerDead();
         }
+    }
+
+    void OnTriggerExit(Collider col)
+    {
+        if (col.gameObject.CompareTag("Enemy"))
+        {
+            gameObject.GetComponent<NavMeshAgent>().enabled = false;
+        }
+
     }
 
     void OnCollisionEnter(Collision col)
