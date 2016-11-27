@@ -23,6 +23,8 @@ public class SpiderAI : EnemyAI, EnemyInterface {
 
     BoxCollider collider;
 
+    private bool sinkEnemy = false;
+
     // Use this for initialization
     protected override void Start () {
         animator = GetComponent<Animator>();
@@ -56,11 +58,18 @@ public class SpiderAI : EnemyAI, EnemyInterface {
             base.NavMesh.Stop();
             rigidBody.isKinematic = true;
             spider.isTrigger = true;
+            gameObject.GetComponent<NavMeshAgent>().enabled = false;
+        }
+
+        if(sinkEnemy)
+        {
+            transform.Translate(-Vector3.up * 1.8f * Time.deltaTime);
         }
     }
 
     void OnCollisionEnter(Collision col)
     {
+        print(col.gameObject.name);
         if (col.gameObject.CompareTag("Player"))
         {
             collider.isTrigger = false;
@@ -111,14 +120,11 @@ public class SpiderAI : EnemyAI, EnemyInterface {
         collider.isTrigger = true;
     }
 
-    //While the player is in collision with the trigger, move him forward 
-    //void OnTriggerStay(Collider other)
-    //{
-    //    float slideSpeed = 15.0f;
-    //    var controller = other.GetComponent<CharacterController>();
-    //    if (other.gameObject.CompareTag("Player"))
-    //    {
-    //        controller.SimpleMove(GameObject.FindGameObjectWithTag("Player").transform.forward * slideSpeed);
-    //    }
-    //}
+    public void StartDestory()
+    {
+        sinkEnemy = true;
+
+        // After 1.5 seconds destory the enemy.
+        Destroy(gameObject, 1.5f);
+    }
 }
