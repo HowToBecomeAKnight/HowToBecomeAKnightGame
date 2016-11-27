@@ -21,7 +21,9 @@ public class SpiderAI : EnemyAI, EnemyInterface {
 
     BoxCollider spider;
 
-    BoxCollider collider;
+    BoxCollider boxCollider;
+
+    private float distToGround;
 
     private bool sinkEnemy = false;
 
@@ -32,9 +34,10 @@ public class SpiderAI : EnemyAI, EnemyInterface {
         rigidBody = GetComponent<Rigidbody>();
 
         enemyAttack = GameObject.FindWithTag("EnemyAttack");
-        collider = enemyAttack.GetComponent<BoxCollider>();
+        boxCollider = enemyAttack.GetComponent<BoxCollider>();
         //Disable the collider on the spider untill it attacks
-        collider.isTrigger = true;
+        boxCollider.isTrigger = true;
+        distToGround = spider.bounds.extents.y;
 
         currHealth = maxHealth;
         base.Start();
@@ -43,22 +46,36 @@ public class SpiderAI : EnemyAI, EnemyInterface {
 	// Update is called once per frame
 	protected override void Update () {
 
-        NavMeshHit hit;
-        if (!base.NavMesh.Raycast(base.player.position, out hit))
+        if (IsGrounded())
         {
-            // enemy can see the player!
-            animator.SetTrigger("Chase");
-            MoveEnemy(base.player.position); 
-        }
-
-
-        if (currHealth == 0.0f && !isDead)
+            //Hanging enemies need their navmesh agent enabled when they are on the ground
+            if (this.gameObject.GetComponent<NavMeshAgent>().enabled != true)
             {
-            Death();
-            base.NavMesh.Stop();
-            rigidBody.isKinematic = true;
-            spider.isTrigger = true;
-            gameObject.GetComponent<NavMeshAgent>().enabled = false;
+                this.GetComponent<Rigidbody>().constraints |= RigidbodyConstraints.FreezePositionY;
+                this.gameObject.GetComponent<NavMeshAgent>().enabled = true;
+            }
+
+            NavMeshHit hit;
+            if (!base.NavMesh.Raycast(base.player.position, out hit))
+            {
+                // enemy can see the player!
+                animator.SetTrigger("Chase");
+                MoveEnemy(base.player.position);
+            }
+
+
+            if (currHealth == 0.0f && !isDead)
+            {
+                Death();
+                base.NavMesh.Stop();
+                this.gameObject.GetComponent<NavMeshAgent>().enabled = false;
+                rigidBody.isKinematic = true;
+                spider.isTrigger = true; 
+            }
+        }
+        else
+        {
+            this.gameObject.GetComponent<NavMeshAgent>().enabled = false;
         }
 
         if(sinkEnemy)
@@ -69,10 +86,9 @@ public class SpiderAI : EnemyAI, EnemyInterface {
 
     void OnCollisionEnter(Collision col)
     {
-        print(col.gameObject.name);
         if (col.gameObject.CompareTag("Player"))
         {
-            collider.isTrigger = false;
+            boxCollider.isTrigger = false;
             animator.SetTrigger("PlayerClose");
         }
 
@@ -117,7 +133,7 @@ public class SpiderAI : EnemyAI, EnemyInterface {
 
     public void AttackDone()
     {
-        collider.isTrigger = true;
+        boxCollider.isTrigger = true;
     }
 
     public void StartDestory()
@@ -126,5 +142,9 @@ public class SpiderAI : EnemyAI, EnemyInterface {
 
         // After 1.5 seconds destory the enemy.
         Destroy(gameObject, 1.5f);
+    }
+
+    public bool IsGrounded() {
+        return Physics.Raycast(transform.position, -Vector3.up, distToGround + 0.1f);
     }
 }
