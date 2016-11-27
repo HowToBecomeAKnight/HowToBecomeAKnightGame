@@ -11,9 +11,15 @@ public class Character : MonoBehaviour {
 
     private float damageWaitTime = 1.0f;
 
+    private GameObject player;
+
+    public Transform checkPoint;
+
     // Use this for initialization
     void Start () {
-	    HealthBar.fillAmount = 1.0f;
+        player = GameObject.FindGameObjectWithTag("Player");
+        checkPoint = GameObject.FindWithTag("StartSpawn").transform;
+        HealthBar.fillAmount = 1.0f;
     }
 	
 	// Update is called once per frame
@@ -39,7 +45,34 @@ public class Character : MonoBehaviour {
             print("PLAYER HIT");
             RemoveHealth(.1f);
             StartCoroutine(damageDelay());
+
+            if(HealthBar.fillAmount == 0)
+            {
+                PlayerDead();
+            }
         }
+
+        if (col.gameObject.CompareTag("OutOfBounds"))
+        {
+            print("OutOfBounds");
+            PlayerDead();
+        }
+    }
+
+    void OnCollisionEnter(Collision col)
+    {
+        if(col.gameObject.CompareTag("CheckPoint"))
+        {
+            checkPoint = col.transform;
+        }
+        
+    }
+
+    private void PlayerDead()
+    {
+        player.transform.position = checkPoint.position;
+        //Player is at full health again
+        AddHealth(1.0f);
     }
 
     IEnumerator damageDelay()

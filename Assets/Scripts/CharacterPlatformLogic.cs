@@ -17,14 +17,12 @@ public class CharacterPlatformLogic : MonoBehaviour {
     //Make player child of platform when they are on it
     void OnTriggerEnter(Collider other)
     {
-        print(other.gameObject.name);
         other.transform.parent = gameObject.transform;
     }
 
     //Player is no longer child of plaform when they get off it
     void OnTriggerExit(Collider other)
     {
-            print("OffPlatform");
             other.transform.parent = null;   
     }
 }
