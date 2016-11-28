@@ -14,19 +14,29 @@ public class SkeletonAI : EnemyAI, EnemyInterface {
 
     bool isAlive = false;
 
-    CapsuleCollider capsuleCollider;
+    private BoxCollider boxCollider;
 
-    Rigidbody rigidBody;
+    private Rigidbody rigidBody;
+
+    private BoxCollider enemyAttack;
 
     private bool canTakeDamage = true;
 
     private float damageWaitTime = 1.0f;
 
+    private bool sinkEnemy = false;
+
     // Use this for initialization
     protected override void Start () {
         animator = GetComponent<Animator>();
-        capsuleCollider = GetComponent<CapsuleCollider>();
+        boxCollider = GetComponent<BoxCollider>();
         rigidBody = GetComponent<Rigidbody>();
+        enemyAttack = GameObject.FindGameObjectWithTag("EnemyAttack").GetComponent<BoxCollider>();
+        enemyAttack.isTrigger = true;
+
+        rigidBody.GetComponent<Rigidbody>().constraints &= ~RigidbodyConstraints.FreezePositionY;
+        //boxCollider.enabled = false;
+        this.GetComponent<NavMeshAgent>().enabled = false;
         currHealth = maxHealth;
         base.Start();
         base.NavMesh.Stop();
@@ -36,34 +46,29 @@ public class SkeletonAI : EnemyAI, EnemyInterface {
 	protected override void Update () {
         distanceToPlayer = Vector3.Distance(transform.position, Player.transform.position);
 
-        if (distanceToPlayer < 30 &&  distanceToPlayer > 15 && !isAlive && !isDead)
+        if (!isDead)
         {
-            print("Alive");
-            animator.SetTrigger("Resurrect");
-            isAlive = true;
+            if (distanceToPlayer < 30 && distanceToPlayer > 15 && !isAlive)
+            {
+                animator.SetTrigger("Resurrect");
+            }
+
+            if (distanceToPlayer < 15 && isAlive && !PlayerInSight())
+            {
+                base.NavMesh.Resume();
+                animator.SetTrigger("Chase");
+                MoveEnemy(Player.position);
+            }
+
+            if (currHealth == 0.0f && isAlive)
+            {
+                Death();
+            }
         }
 
-        if(distanceToPlayer < 15 && distanceToPlayer > 5 && isAlive && !isDead)
+        if (sinkEnemy)
         {
-            base.NavMesh.Resume();
-            print("Chase");
-            animator.SetTrigger("Chase");
-            MoveEnemy(Player.position);
-        }
-
-        if (distanceToPlayer < 5 && isAlive && !isDead)
-        {
-            print("attack");
-            animator.SetTrigger("Attack");
-        }
-
-        if (currHealth == 0.0f && !isDead && isAlive)
-        {
-            Death();
-            base.NavMesh.Stop();
-            rigidBody.isKinematic = true;
-            capsuleCollider.isTrigger = true;
-
+            transform.Translate(-Vector3.up * 1.8f * Time.deltaTime);
         }
     }
 
@@ -74,7 +79,7 @@ public class SkeletonAI : EnemyAI, EnemyInterface {
             animator.SetTrigger("Attack");
         }
 
-        if (col.gameObject.CompareTag("Weapon"))
+        if (col.gameObject.CompareTag("Weapon") && canTakeDamage)
         {
             print("HIT");
             currHealth -= 25.0f;
@@ -85,7 +90,13 @@ public class SkeletonAI : EnemyAI, EnemyInterface {
     void Death()
     {
         isDead = true;
+
         animator.SetTrigger("Die");
+
+        base.NavMesh.Stop();
+        this.gameObject.GetComponent<NavMeshAgent>().enabled = false;
+        rigidBody.isKinematic = true;
+        boxCollider.isTrigger = true;
     }
 
     public float getCurrHealth()
@@ -103,5 +114,48 @@ public class SkeletonAI : EnemyAI, EnemyInterface {
         canTakeDamage = false;
         yield return new WaitForSeconds(damageWaitTime);
         canTakeDamage = true;
+    }
+
+    IEnumerator disableObject()
+    {
+        yield return new WaitForSeconds(1.5f);
+        this.gameObject.SetActive(false);
+    }
+
+    public void StartResurrection()
+    {
+    }
+
+    public void ResurrectionDone()
+    {
+        isAlive = true;
+        canTakeDamage = true;
+        this.GetComponent<NavMeshAgent>().enabled = true;
+        rigidBody.GetComponent<Rigidbody>().constraints |= RigidbodyConstraints.FreezePositionY;
+        boxCollider.enabled = true;
+    }
+
+    public void StartDestory()
+    {
+        sinkEnemy = true;
+
+        // After 1.5 seconds disable the enemy.
+        StartCoroutine(disableObject());
+    }
+
+    public bool PlayerInSight()
+    {
+        NavMeshHit hit;
+        return this.NavMesh.Raycast(Player.position, out hit);
+    }
+
+    public void AttackDone()
+    {
+        enemyAttack.isTrigger = true;
+    }
+
+    public void AttackStart()
+    {
+        enemyAttack.isTrigger = false;
     }
 }
