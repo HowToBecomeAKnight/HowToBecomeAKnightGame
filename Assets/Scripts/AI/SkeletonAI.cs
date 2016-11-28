@@ -34,7 +34,7 @@ public class SkeletonAI : EnemyAI, EnemyInterface {
 	
 	// Update is called once per frame
 	protected override void Update () {
-        distanceToPlayer = Vector3.Distance(transform.position, player.transform.position);
+        distanceToPlayer = Vector3.Distance(transform.position, Player.transform.position);
 
         if (distanceToPlayer < 30 &&  distanceToPlayer > 15 && !isAlive && !isDead)
         {
@@ -48,7 +48,7 @@ public class SkeletonAI : EnemyAI, EnemyInterface {
             base.NavMesh.Resume();
             print("Chase");
             animator.SetTrigger("Chase");
-            MoveEnemy(player.position);
+            MoveEnemy(Player.position);
         }
 
         if (distanceToPlayer < 5 && isAlive && !isDead)

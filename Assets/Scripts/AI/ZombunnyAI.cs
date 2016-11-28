@@ -30,12 +30,12 @@ public class ZombunnyAI : EnemyAI, EnemyInterface
     // Update is called once per frame
     void Update()
     {
-        distanceToPlayer = Vector3.Distance(transform.position, player.transform.position);
+        distanceToPlayer = Vector3.Distance(transform.position, Player.transform.position);
 
         if (distanceToPlayer < 15 && !isDead)
         {
             animator.SetTrigger("Chase");
-            MoveEnemy(player.position);
+            MoveEnemy(Player.position);
         }
         if (currHealth == 0.0f && !isDead)
         {

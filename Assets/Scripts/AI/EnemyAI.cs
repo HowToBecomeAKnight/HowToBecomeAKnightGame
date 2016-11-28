@@ -4,11 +4,23 @@ using System;
 
 public abstract class EnemyAI : MonoBehaviour {
 
-    public Transform player;
+    private Transform player;
 
     private NavMeshAgent navMesh;
 
     private Vector3 startPosition;
+
+    public Transform Player
+    {
+        get
+        {
+            return player;
+        }
+        set
+        {
+            player = value;
+        }
+    }
 
     // Use this for initialization
     protected virtual void Start () {

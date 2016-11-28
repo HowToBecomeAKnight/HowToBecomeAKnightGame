@@ -17,6 +17,8 @@ public class Character : MonoBehaviour {
 
     private NavMeshAgent agent;
 
+    public bool finishedLevel = false;
+
     // Use this for initialization
     void Start () {
         agent = GetComponentInChildren<NavMeshAgent>();
@@ -29,6 +31,17 @@ public class Character : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+
+        if (HealthBar.fillAmount == 0)
+        {
+            PlayerDead();
+        }
+
+        //When player completes a level reset the checkpoint to the start
+        if(finishedLevel)
+        {
+            checkPoint = GameObject.FindWithTag("StartSpawn").transform;
+        }
     }
 
     public void RemoveHealth(float amount)
@@ -60,17 +73,29 @@ public class Character : MonoBehaviour {
             print("PLAYER HIT");
             RemoveHealth(.1f);
             StartCoroutine(damageDelay());
+        }
 
-            if(HealthBar.fillAmount == 0)
-            {
-                PlayerDead();
-            }
+        if(col.gameObject.CompareTag("Hazard") && canTakeDamage)
+        {
+            print("PLAYER HIT");
+            RemoveHealth(.2f);
+            StartCoroutine(damageDelay());
         }
 
         if (col.gameObject.CompareTag("OutOfBounds"))
         {
             print("OutOfBounds");
             PlayerDead();
+        }
+    }
+
+    void OnTriggerStay(Collider col)
+    {
+        if (col.gameObject.CompareTag("Hazard") && canTakeDamage)
+        {
+            print("PLAYER HIT");
+            RemoveHealth(.2f);
+            StartCoroutine(damageDelay());
         }
     }
 
