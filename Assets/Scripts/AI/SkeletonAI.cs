@@ -35,7 +35,6 @@ public class SkeletonAI : EnemyAI, EnemyInterface {
         enemyAttack.isTrigger = true;
 
         rigidBody.GetComponent<Rigidbody>().constraints &= ~RigidbodyConstraints.FreezePositionY;
-        //boxCollider.enabled = false;
         this.GetComponent<NavMeshAgent>().enabled = false;
         currHealth = maxHealth;
         base.Start();
@@ -97,6 +96,7 @@ public class SkeletonAI : EnemyAI, EnemyInterface {
         this.gameObject.GetComponent<NavMeshAgent>().enabled = false;
         rigidBody.isKinematic = true;
         boxCollider.isTrigger = true;
+        enemyAttack.isTrigger = true;
     }
 
     public float getCurrHealth()
