@@ -3,10 +3,13 @@ using System.Collections;
 
 public class ZombunnyAI : EnemyAI, EnemyInterface
 {
+    #region Variables
     Animator animator;
 
     public float maxHealth = 100.0f;
+
     float currHealth;
+
     bool isDead = false;
 
     float distanceToPlayer;
@@ -16,6 +19,11 @@ public class ZombunnyAI : EnemyAI, EnemyInterface
     Rigidbody rigidBody;
 
     private bool sinkEnemy = false;
+
+    private bool canTakeDamage = true;
+
+    private float damageWaitTime = 0.7f;
+    #endregion
 
     // Use this for initialization
     protected override void Start()
@@ -32,18 +40,15 @@ public class ZombunnyAI : EnemyAI, EnemyInterface
     {
         distanceToPlayer = Vector3.Distance(transform.position, Player.transform.position);
 
-        if (distanceToPlayer < 15 && !isDead)
+        if (!isDead)
         {
             animator.SetTrigger("Chase");
             MoveEnemy(Player.position);
-        }
-        if (currHealth == 0.0f && !isDead)
-        {
-            Death();
-            base.NavMesh.Stop();
-            rigidBody.isKinematic = true;
-            capsuleCollider.isTrigger = true;
 
+            if (currHealth == 0.0f)
+            {
+                Death();
+            }
         }
 
         if (sinkEnemy)
@@ -55,15 +60,21 @@ public class ZombunnyAI : EnemyAI, EnemyInterface
     void Death()
     {
         isDead = true;
-        animator.SetTrigger("Die");        
+        animator.SetTrigger("Die");
+
+        base.NavMesh.Stop();
+        this.gameObject.GetComponent<NavMeshAgent>().enabled = false;
+        rigidBody.isKinematic = true;
+        capsuleCollider.isTrigger = true;
     }
 
     void OnCollisionEnter(Collision col)
     {
-        if (col.gameObject.CompareTag("Weapon"))
+        if (col.gameObject.CompareTag("Weapon") && canTakeDamage)
         {
             print("HIT");
-            currHealth -= 25.0f;
+            currHealth -= 50.0f;
+            StartCoroutine(damageDelay());
         }
     }
 
@@ -83,5 +94,12 @@ public class ZombunnyAI : EnemyAI, EnemyInterface
     public float getMaxHealth()
     {
         return maxHealth;
+    }
+
+    IEnumerator damageDelay()
+    {
+        canTakeDamage = false;
+        yield return new WaitForSeconds(damageWaitTime);
+        canTakeDamage = true;
     }
 }

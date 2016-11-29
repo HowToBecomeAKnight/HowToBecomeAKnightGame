@@ -3,6 +3,7 @@ using System.Collections;
 
 public class SkeletonAI : EnemyAI, EnemyInterface {
 
+    #region Variables
     Animator animator;
 
     bool isDead = false;
@@ -25,6 +26,7 @@ public class SkeletonAI : EnemyAI, EnemyInterface {
     private float damageWaitTime = 1.0f;
 
     private bool sinkEnemy = false;
+    #endregion
 
     // Use this for initialization
     protected override void Start () {
