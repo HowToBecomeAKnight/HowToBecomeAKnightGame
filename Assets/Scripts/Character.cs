@@ -19,6 +19,9 @@ public class Character : MonoBehaviour {
 
     public bool finishedLevel = false;
 
+    public GameObject lever;
+    public GameObject teleportToHere;
+
     // Use this for initialization
     void Start () {
         agent = GetComponentInChildren<NavMeshAgent>();
@@ -27,10 +30,16 @@ public class Character : MonoBehaviour {
         HealthBar.fillAmount = 1.0f;
 
         gameObject.GetComponent<NavMeshAgent>().enabled = false;
+
     }
 	
 	// Update is called once per frame
 	void Update () {
+
+        if (finishedLevel)
+        {
+            lever.transform.position = teleportToHere.transform.position;
+        }
 
         if (HealthBar.fillAmount == 0)
         {

@@ -1,30 +1,21 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class leverOpenFinalPortal : MonoBehaviour {
+public class leverFireStop : MonoBehaviour {
 
     Animation anim;
     Animation gateAnim;
     private bool colliding = false;
-    private bool finished;
-    public GameObject portal;
-    public GameObject portalGlow;
-
-    private MeshRenderer rend1;
-    private MeshRenderer rend;//this script will make the invisible finish portal appear when it is pulled
+ 
+    public GameObject fireTrap;
+    Collider col;
 
     // Use this for initialization
     void Start()
     {
-        //rend1 and rend are used to hide the portal itself, as well as the purple glowing center part.
+
         anim = GetComponent<Animation>();
-        gateAnim = portal.GetComponent<Animation>();
-
-        rend = portal.GetComponent<MeshRenderer>();
-        rend.enabled = false;
-
-        rend1 = portalGlow.GetComponent<MeshRenderer>();
-        rend1.enabled = false;
+        col = fireTrap.GetComponent<BoxCollider>();
 
     }
 
@@ -34,13 +25,11 @@ public class leverOpenFinalPortal : MonoBehaviour {
 
         if (Input.GetKey(KeyCode.F) && colliding)//if f is pressed and objects are colliding
         {
-            //make portal appear when lever is pulled
             anim.Play("pullLever");//play lever animation
             Debug.Log("play pull lever");
-            rend.enabled = true;
-            rend1.enabled = true;
-            Debug.Log("make portal appear");
+     
             colliding = false;
+            col.enabled = false;
         }
 
     }
@@ -60,3 +49,4 @@ public class leverOpenFinalPortal : MonoBehaviour {
         colliding = false;
     }
 }
+

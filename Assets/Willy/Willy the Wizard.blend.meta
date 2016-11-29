@@ -1,0 +1,219 @@
+fileFormatVersion: 2
+guid: b5fcb56bbcb8a1e4b8a3bcd35ea3f4c2
+timeCreated: 1480375039
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Armature_001
+    100002: Cylinder
+    100004: finger_L
+    100006: finger_R
+    100008: foot_L
+    100010: foot_R
+    100012: hand_L
+    100014: hand_R
+    100016: hat
+    100018: head
+    100020: Icosphere
+    100022: Icosphere_001
+    100024: Icosphere_002
+    100026: Icosphere_003
+    100028: Icosphere_004
+    100030: Icosphere_005
+    100032: Icosphere_006
+    100034: Icosphere_007
+    100036: Icosphere_008
+    100038: Icosphere_009
+    100040: leg_L
+    100042: leg_R
+    100044: lowArm_L
+    100046: lowArm_R
+    100048: lowBeard
+    100050: lowHair
+    100052: lowMouth
+    100054: midBeard
+    100056: midHair
+    100058: neck
+    100060: Plane
+    100062: root
+    100064: Sphere
+    100066: Sphere_001
+    100068: Sphere_002
+    100070: Sphere_003
+    100072: Sphere_004
+    100074: staff
+    100076: thumb_L
+    100078: thumb_R
+    100080: upArm_L
+    100082: upArm_R
+    100084: UpBeard
+    100086: upHair
+    100088: upMouth
+    100090: //RootNode
+    400000: Armature_001
+    400002: Cylinder
+    400004: finger_L
+    400006: finger_R
+    400008: foot_L
+    400010: foot_R
+    400012: hand_L
+    400014: hand_R
+    400016: hat
+    400018: head
+    400020: Icosphere
+    400022: Icosphere_001
+    400024: Icosphere_002
+    400026: Icosphere_003
+    400028: Icosphere_004
+    400030: Icosphere_005
+    400032: Icosphere_006
+    400034: Icosphere_007
+    400036: Icosphere_008
+    400038: Icosphere_009
+    400040: leg_L
+    400042: leg_R
+    400044: lowArm_L
+    400046: lowArm_R
+    400048: lowBeard
+    400050: lowHair
+    400052: lowMouth
+    400054: midBeard
+    400056: midHair
+    400058: neck
+    400060: Plane
+    400062: root
+    400064: Sphere
+    400066: Sphere_001
+    400068: Sphere_002
+    400070: Sphere_003
+    400072: Sphere_004
+    400074: staff
+    400076: thumb_L
+    400078: thumb_R
+    400080: upArm_L
+    400082: upArm_R
+    400084: UpBeard
+    400086: upHair
+    400088: upMouth
+    400090: //RootNode
+    2300000: Icosphere_001
+    2300002: Plane
+    2300004: Sphere
+    2300006: staff
+    3300000: Icosphere_001
+    3300002: Plane
+    3300004: Sphere
+    3300006: staff
+    4300000: Plane
+    4300002: Icosphere_004
+    4300004: Icosphere_003
+    4300006: Sphere_004
+    4300008: Sphere_002
+    4300010: Sphere_003
+    4300012: Icosphere_009
+    4300014: Icosphere_006
+    4300016: Cylinder
+    4300018: Icosphere_008
+    4300020: Icosphere_007
+    4300022: Sphere_001
+    4300024: Sphere
+    4300026: Icosphere_005
+    4300028: Icosphere_002
+    4300030: Icosphere
+    4300032: staff
+    4300034: Icosphere_001
+    7400000: Default Take
+    7400002: cast_spell
+    7400004: dance
+    7400006: give
+    7400008: idle
+    7400010: idle_--__run
+    7400012: morpheusSummon
+    7400014: run
+    7400016: singleJump
+    7400018: singleJump_--__idle
+    7400020: staffSlam
+    7400022: T
+    7400024: talking
+    7400026: walk
+    7400028: wave
+    9500000: //RootNode
+    13700000: Cylinder
+    13700002: Icosphere
+    13700004: Icosphere_002
+    13700006: Icosphere_003
+    13700008: Icosphere_004
+    13700010: Icosphere_005
+    13700012: Icosphere_006
+    13700014: Icosphere_007
+    13700016: Icosphere_008
+    13700018: Icosphere_009
+    13700020: Sphere_001
+    13700022: Sphere_002
+    13700024: Sphere_003
+    13700026: Sphere_004
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
