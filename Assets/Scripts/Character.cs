@@ -91,6 +91,14 @@ public class Character : MonoBehaviour {
             StartCoroutine(damageDelay());
         }
 
+        if (col.gameObject.CompareTag("Trap") && canTakeDamage)
+        {
+            gameObject.GetComponent<NavMeshAgent>().enabled = true;
+            print("PLAYER HIT");
+            RemoveHealth(.8f);
+            StartCoroutine(damageDelay());
+        }
+
         if (col.gameObject.CompareTag("OutOfBounds"))
         {
             print("OutOfBounds");
@@ -104,6 +112,13 @@ public class Character : MonoBehaviour {
         {
             print("PLAYER HIT");
             RemoveHealth(.2f);
+            StartCoroutine(damageDelay());
+        }
+
+        if (col.gameObject.CompareTag("Trap") && canTakeDamage)
+        {
+            print("PLAYER HIT");
+            RemoveHealth(.8f);
             StartCoroutine(damageDelay());
         }
     }
@@ -123,7 +138,13 @@ public class Character : MonoBehaviour {
         {
             checkPoint = col.transform;
         }
-        
+
+        if (col.gameObject.CompareTag("Hazard") && canTakeDamage)
+        {
+            print("PLAYER HIT");
+            RemoveHealth(.2f);
+            StartCoroutine(damageDelay());
+        }
     }
 
     private void PlayerDead()

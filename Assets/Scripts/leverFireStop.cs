@@ -30,6 +30,7 @@ public class leverFireStop : MonoBehaviour {
      
             colliding = false;
             col.enabled = false;
+            fireTrap.GetComponentInChildren<ParticleSystem>().Stop();
         }
 
     }
