@@ -104,6 +104,13 @@ public class Character : MonoBehaviour {
             print("OutOfBounds");
             PlayerDead();
         }
+
+        if (col.gameObject.CompareTag("Projectile"))
+        {
+            print("PLAYER HIT PROJECTILE");
+            RemoveHealth(.1f);
+            StartCoroutine(damageDelay());
+        }
     }
 
     void OnTriggerStay(Collider col)

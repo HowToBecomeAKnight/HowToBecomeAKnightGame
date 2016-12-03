@@ -13,7 +13,7 @@ public class SkeletonAI : EnemyAI, EnemyInterface {
 
     float distanceToPlayer;
 
-    bool isAlive = false;
+    private bool isAlive = false;
 
     private BoxCollider boxCollider;
 
@@ -21,11 +21,78 @@ public class SkeletonAI : EnemyAI, EnemyInterface {
 
     private BoxCollider enemyAttack;
 
-    private bool canTakeDamage = true;
+    private bool canTakeDamage = false;
 
     private float damageWaitTime = 1.0f;
 
     private bool sinkEnemy = false;
+    #endregion
+
+    #region Properties
+    public float CurrentHealth
+    {
+        get
+        {
+            return currHealth;
+        }
+
+        set
+        {
+            currHealth = value;
+        }
+    }
+
+    public bool IsDead
+    {
+        get
+        {
+            return isDead;
+        }
+
+        set
+        {
+            isDead = value;
+        }
+    }
+
+    public bool CanTakeDamage
+    {
+        get
+        {
+            return canTakeDamage;
+        }
+
+        set
+        {
+            canTakeDamage = value;
+        }
+    }
+
+    public Animator GetAnimator
+    {
+        get
+        {
+            return animator;
+        }
+
+        set
+        {
+            animator = value;
+        }
+    }
+
+    public bool IsAlive
+    {
+        get
+        {
+            return isAlive;
+        }
+
+        set
+        {
+            isAlive = value;
+        }
+    }
     #endregion
 
     // Use this for initialization
