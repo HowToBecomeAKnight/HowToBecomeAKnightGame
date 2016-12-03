@@ -14,7 +14,9 @@ public class ZombunnyAI : EnemyAI, EnemyInterface
 
     float distanceToPlayer;
 
-    CapsuleCollider capsuleCollider;
+    CapsuleCollider enemyCollider;
+
+    GameObject damageCollider;
 
     Rigidbody rigidBody;
 
@@ -29,7 +31,8 @@ public class ZombunnyAI : EnemyAI, EnemyInterface
     protected override void Start()
     {
         animator = GetComponent<Animator>();
-        capsuleCollider = GetComponent<CapsuleCollider>();
+        enemyCollider = GameObject.FindGameObjectWithTag("Enemy").GetComponent<CapsuleCollider>();
+        damageCollider = GameObject.FindGameObjectWithTag("EnemyAttack");
         rigidBody = GetComponent<Rigidbody>();
         currHealth = maxHealth;
         base.Start();
@@ -65,7 +68,8 @@ public class ZombunnyAI : EnemyAI, EnemyInterface
         base.NavMesh.Stop();
         this.gameObject.GetComponent<NavMeshAgent>().enabled = false;
         rigidBody.isKinematic = true;
-        capsuleCollider.isTrigger = true;
+        enemyCollider.isTrigger = true;
+        damageCollider.GetComponent<CapsuleCollider>().enabled = false;
     }
 
     void OnCollisionEnter(Collision col)

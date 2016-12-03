@@ -128,6 +128,13 @@ public class Character : MonoBehaviour {
             RemoveHealth(.8f);
             StartCoroutine(damageDelay());
         }
+
+        if (col.gameObject.CompareTag("EnemyAttack") && canTakeDamage)
+        {
+            print("PLAYER HIT");
+            RemoveHealth(.1f);
+            StartCoroutine(damageDelay());
+        }
     }
 
     void OnTriggerExit(Collider col)
