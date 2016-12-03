@@ -6,19 +6,18 @@ public class Dialogue : MonoBehaviour {
 
     public float heightAboveCharacter = 5.0f;
     public float timeBetweenLetters = 0.04f;
-    public float distanceToShow = 50.0f;
+    public float distanceToShow = 15.0f;
     public float fadeSpeed = 2.0f;
+    public float angle = 45f;
 
     public string[] messages = { "this is the first message", "this is the second message", "this is the third message" };
 
     private Text DialogueText;
-    string message;
     float distance;
     Transform player;
     bool isFading;
     bool isTyping;
     CanvasGroup canvasGroup;
-    float posTopObject;
 
     int currMessage;
     // Use this for initialization
@@ -27,16 +26,20 @@ public class Dialogue : MonoBehaviour {
         canvasGroup = this.GetComponent<CanvasGroup>();
         isFading = false;
         DialogueText = this.GetComponentInChildren<Text>();
-        currMessage = 0;
-        isTyping = true;
-        StartCoroutine(TypeTextLetters(currMessage));
+        currMessage = -1;
     }
 	
 	// Update is called once per frame
 	void Update () {
         distance = Vector3.Distance(transform.parent.position, player.position);
-        if (distance < distanceToShow)
-        {
+        if (distance < distanceToShow) {
+            if (Vector3.Angle(player.transform.forward, transform.parent.position - player.transform.position) < angle)
+            {
+                if (Input.GetKeyDown(KeyCode.F))
+                {
+                    NextMessage();
+                }
+            }
             if (canvasGroup.alpha < 1f && !isFading)
             {
                 isFading = true;
@@ -69,7 +72,17 @@ public class Dialogue : MonoBehaviour {
         {
            DialogueText.text = "";
            isTyping = true;
-           StartCoroutine(TypeTextLetters(++currMessage));
+           if (++currMessage >= messages.Length)
+            {
+                isFading = true;
+                StartCoroutine(FadeDialogue());
+                this.enabled = false;
+            }
+           else
+            {
+                StartCoroutine(TypeTextLetters(currMessage));
+
+            }
         }
     }
 
@@ -92,9 +105,11 @@ public class Dialogue : MonoBehaviour {
 
     IEnumerator FadeDialogue()
     {
+        Debug.Log("ay");
         // fade in or fade out dialogue
         if (canvasGroup.alpha == 1f)
         {
+            Debug.Log("fade out");
             while (canvasGroup.alpha > 0)
             {
                 canvasGroup.alpha -= Time.deltaTime * fadeSpeed;
@@ -104,6 +119,7 @@ public class Dialogue : MonoBehaviour {
         }
         else if (canvasGroup.alpha == 0)
         {
+            Debug.Log("fade in");
             while (canvasGroup.alpha < 1f)
             {
                 canvasGroup.alpha += Time.deltaTime * fadeSpeed;
