@@ -7,6 +7,7 @@ public class leverOpenToyBox : MonoBehaviour {
     Animation toyboxAnim;
     private bool colliding = false;
     public GameObject toybox;
+    Collider lidCollider;
 
     // Use this for initialization
     void Start()
@@ -14,6 +15,8 @@ public class leverOpenToyBox : MonoBehaviour {
 
         anim = GetComponent<Animation>();
         toyboxAnim = toybox.GetComponent<Animation>();
+
+        lidCollider = toybox.GetComponent<BoxCollider>();
 
     }
 
@@ -28,6 +31,7 @@ public class leverOpenToyBox : MonoBehaviour {
             toyboxAnim.Play("ArmatureAction");//move gate animation
             Debug.Log("open toybox");
             colliding = false;
+            lidCollider.enabled = false;
         }
 
     }

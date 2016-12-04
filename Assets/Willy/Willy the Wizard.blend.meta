@@ -173,7 +173,1777 @@ ModelImporter:
     animationScaleError: 0.5
     animationWrapMode: 0
     extraExposedTransformPaths: []
-    clipAnimations: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Default Take
+      takeName: Default Take
+      firstFrame: -1
+      lastFrame: 499
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature_001
+        weight: 1
+      - path: Armature_001/root
+        weight: 1
+      - path: Armature_001/root/leg_L
+        weight: 1
+      - path: Armature_001/root/leg_L/foot_L
+        weight: 1
+      - path: Armature_001/root/leg_R
+        weight: 1
+      - path: Armature_001/root/leg_R/foot_R
+        weight: 1
+      - path: Armature_001/root/neck
+        weight: 1
+      - path: Armature_001/root/neck/head
+        weight: 1
+      - path: Armature_001/root/neck/head/hat
+        weight: 1
+      - path: Armature_001/root/neck/head/lowMouth
+        weight: 1
+      - path: Armature_001/root/neck/head/UpBeard
+        weight: 1
+      - path: Armature_001/root/neck/head/UpBeard/midBeard
+        weight: 1
+      - path: Armature_001/root/neck/head/UpBeard/midBeard/lowBeard
+        weight: 1
+      - path: Armature_001/root/neck/head/upHair
+        weight: 1
+      - path: Armature_001/root/neck/head/upHair/midHair
+        weight: 1
+      - path: Armature_001/root/neck/head/upHair/midHair/lowHair
+        weight: 1
+      - path: Armature_001/root/neck/head/upMouth
+        weight: 1
+      - path: Armature_001/root/upArm_L
+        weight: 1
+      - path: Armature_001/root/upArm_L/lowArm_L
+        weight: 1
+      - path: Armature_001/root/upArm_L/lowArm_L/hand_L
+        weight: 1
+      - path: Armature_001/root/upArm_L/lowArm_L/hand_L/finger_L
+        weight: 1
+      - path: Armature_001/root/upArm_L/lowArm_L/hand_L/thumb_L
+        weight: 1
+      - path: Armature_001/root/upArm_R
+        weight: 1
+      - path: Armature_001/root/upArm_R/lowArm_R
+        weight: 1
+      - path: Armature_001/root/upArm_R/lowArm_R/hand_R
+        weight: 1
+      - path: Armature_001/root/upArm_R/lowArm_R/hand_R/finger_R
+        weight: 1
+      - path: Armature_001/root/upArm_R/lowArm_R/hand_R/thumb_R
+        weight: 1
+      - path: Cylinder
+        weight: 1
+      - path: Icosphere
+        weight: 1
+      - path: Icosphere_001
+        weight: 1
+      - path: Icosphere_002
+        weight: 1
+      - path: Icosphere_003
+        weight: 1
+      - path: Icosphere_004
+        weight: 1
+      - path: Icosphere_005
+        weight: 1
+      - path: Icosphere_006
+        weight: 1
+      - path: Icosphere_007
+        weight: 1
+      - path: Icosphere_008
+        weight: 1
+      - path: Icosphere_009
+        weight: 1
+      - path: Sphere
+        weight: 1
+      - path: Sphere_001
+        weight: 1
+      - path: Sphere_002
+        weight: 1
+      - path: Sphere_003
+        weight: 1
+      - path: Sphere_004
+        weight: 1
+      - path: staff
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: cast_spell
+      takeName: cast_spell
+      firstFrame: 675
+      lastFrame: 736
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature_001
+        weight: 1
+      - path: Armature_001/root
+        weight: 1
+      - path: Armature_001/root/leg_L
+        weight: 1
+      - path: Armature_001/root/leg_L/foot_L
+        weight: 1
+      - path: Armature_001/root/leg_R
+        weight: 1
+      - path: Armature_001/root/leg_R/foot_R
+        weight: 1
+      - path: Armature_001/root/neck
+        weight: 1
+      - path: Armature_001/root/neck/head
+        weight: 1
+      - path: Armature_001/root/neck/head/hat
+        weight: 1
+      - path: Armature_001/root/neck/head/lowMouth
+        weight: 1
+      - path: Armature_001/root/neck/head/UpBeard
+        weight: 1
+      - path: Armature_001/root/neck/head/UpBeard/midBeard
+        weight: 1
+      - path: Armature_001/root/neck/head/UpBeard/midBeard/lowBeard
+        weight: 1
+      - path: Armature_001/root/neck/head/upHair
+        weight: 1
+      - path: Armature_001/root/neck/head/upHair/midHair
+        weight: 1
+      - path: Armature_001/root/neck/head/upHair/midHair/lowHair
+        weight: 1
+      - path: Armature_001/root/neck/head/upMouth
+        weight: 1
+      - path: Armature_001/root/upArm_L
+        weight: 1
+      - path: Armature_001/root/upArm_L/lowArm_L
+        weight: 1
+      - path: Armature_001/root/upArm_L/lowArm_L/hand_L
+        weight: 1
+      - path: Armature_001/root/upArm_L/lowArm_L/hand_L/finger_L
+        weight: 1
+      - path: Armature_001/root/upArm_L/lowArm_L/hand_L/thumb_L
+        weight: 1
+      - path: Armature_001/root/upArm_R
+        weight: 1
+      - path: Armature_001/root/upArm_R/lowArm_R
+        weight: 1
+      - path: Armature_001/root/upArm_R/lowArm_R/hand_R
+        weight: 1
+      - path: Armature_001/root/upArm_R/lowArm_R/hand_R/finger_R
+        weight: 1
+      - path: Armature_001/root/upArm_R/lowArm_R/hand_R/thumb_R
+        weight: 1
+      - path: Cylinder
+        weight: 1
+      - path: Icosphere
+        weight: 1
+      - path: Icosphere_001
+        weight: 1
+      - path: Icosphere_002
+        weight: 1
+      - path: Icosphere_003
+        weight: 1
+      - path: Icosphere_004
+        weight: 1
+      - path: Icosphere_005
+        weight: 1
+      - path: Icosphere_006
+        weight: 1
+      - path: Icosphere_007
+        weight: 1
+      - path: Icosphere_008
+        weight: 1
+      - path: Icosphere_009
+        weight: 1
+      - path: Sphere
+        weight: 1
+      - path: Sphere_001
+        weight: 1
+      - path: Sphere_002
+        weight: 1
+      - path: Sphere_003
+        weight: 1
+      - path: Sphere_004
+        weight: 1
+      - path: staff
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: dance
+      takeName: dance
+      firstFrame: 780
+      lastFrame: 849
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature_001
+        weight: 1
+      - path: Armature_001/root
+        weight: 1
+      - path: Armature_001/root/leg_L
+        weight: 1
+      - path: Armature_001/root/leg_L/foot_L
+        weight: 1
+      - path: Armature_001/root/leg_R
+        weight: 1
+      - path: Armature_001/root/leg_R/foot_R
+        weight: 1
+      - path: Armature_001/root/neck
+        weight: 1
+      - path: Armature_001/root/neck/head
+        weight: 1
+      - path: Armature_001/root/neck/head/hat
+        weight: 1
+      - path: Armature_001/root/neck/head/lowMouth
+        weight: 1
+      - path: Armature_001/root/neck/head/UpBeard
+        weight: 1
+      - path: Armature_001/root/neck/head/UpBeard/midBeard
+        weight: 1
+      - path: Armature_001/root/neck/head/UpBeard/midBeard/lowBeard
+        weight: 1
+      - path: Armature_001/root/neck/head/upHair
+        weight: 1
+      - path: Armature_001/root/neck/head/upHair/midHair
+        weight: 1
+      - path: Armature_001/root/neck/head/upHair/midHair/lowHair
+        weight: 1
+      - path: Armature_001/root/neck/head/upMouth
+        weight: 1
+      - path: Armature_001/root/upArm_L
+        weight: 1
+      - path: Armature_001/root/upArm_L/lowArm_L
+        weight: 1
+      - path: Armature_001/root/upArm_L/lowArm_L/hand_L
+        weight: 1
+      - path: Armature_001/root/upArm_L/lowArm_L/hand_L/finger_L
+        weight: 1
+      - path: Armature_001/root/upArm_L/lowArm_L/hand_L/thumb_L
+        weight: 1
+      - path: Armature_001/root/upArm_R
+        weight: 1
+      - path: Armature_001/root/upArm_R/lowArm_R
+        weight: 1
+      - path: Armature_001/root/upArm_R/lowArm_R/hand_R
+        weight: 1
+      - path: Armature_001/root/upArm_R/lowArm_R/hand_R/finger_R
+        weight: 1
+      - path: Armature_001/root/upArm_R/lowArm_R/hand_R/thumb_R
+        weight: 1
+      - path: Cylinder
+        weight: 1
+      - path: Icosphere
+        weight: 1
+      - path: Icosphere_001
+        weight: 1
+      - path: Icosphere_002
+        weight: 1
+      - path: Icosphere_003
+        weight: 1
+      - path: Icosphere_004
+        weight: 1
+      - path: Icosphere_005
+        weight: 1
+      - path: Icosphere_006
+        weight: 1
+      - path: Icosphere_007
+        weight: 1
+      - path: Icosphere_008
+        weight: 1
+      - path: Icosphere_009
+        weight: 1
+      - path: Sphere
+        weight: 1
+      - path: Sphere_001
+        weight: 1
+      - path: Sphere_002
+        weight: 1
+      - path: Sphere_003
+        weight: 1
+      - path: Sphere_004
+        weight: 1
+      - path: staff
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: give
+      takeName: give
+      firstFrame: 884
+      lastFrame: 935
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature_001
+        weight: 1
+      - path: Armature_001/root
+        weight: 1
+      - path: Armature_001/root/leg_L
+        weight: 1
+      - path: Armature_001/root/leg_L/foot_L
+        weight: 1
+      - path: Armature_001/root/leg_R
+        weight: 1
+      - path: Armature_001/root/leg_R/foot_R
+        weight: 1
+      - path: Armature_001/root/neck
+        weight: 1
+      - path: Armature_001/root/neck/head
+        weight: 1
+      - path: Armature_001/root/neck/head/hat
+        weight: 1
+      - path: Armature_001/root/neck/head/lowMouth
+        weight: 1
+      - path: Armature_001/root/neck/head/UpBeard
+        weight: 1
+      - path: Armature_001/root/neck/head/UpBeard/midBeard
+        weight: 1
+      - path: Armature_001/root/neck/head/UpBeard/midBeard/lowBeard
+        weight: 1
+      - path: Armature_001/root/neck/head/upHair
+        weight: 1
+      - path: Armature_001/root/neck/head/upHair/midHair
+        weight: 1
+      - path: Armature_001/root/neck/head/upHair/midHair/lowHair
+        weight: 1
+      - path: Armature_001/root/neck/head/upMouth
+        weight: 1
+      - path: Armature_001/root/upArm_L
+        weight: 1
+      - path: Armature_001/root/upArm_L/lowArm_L
+        weight: 1
+      - path: Armature_001/root/upArm_L/lowArm_L/hand_L
+        weight: 1
+      - path: Armature_001/root/upArm_L/lowArm_L/hand_L/finger_L
+        weight: 1
+      - path: Armature_001/root/upArm_L/lowArm_L/hand_L/thumb_L
+        weight: 1
+      - path: Armature_001/root/upArm_R
+        weight: 1
+      - path: Armature_001/root/upArm_R/lowArm_R
+        weight: 1
+      - path: Armature_001/root/upArm_R/lowArm_R/hand_R
+        weight: 1
+      - path: Armature_001/root/upArm_R/lowArm_R/hand_R/finger_R
+        weight: 1
+      - path: Armature_001/root/upArm_R/lowArm_R/hand_R/thumb_R
+        weight: 1
+      - path: Cylinder
+        weight: 1
+      - path: Icosphere
+        weight: 1
+      - path: Icosphere_001
+        weight: 1
+      - path: Icosphere_002
+        weight: 1
+      - path: Icosphere_003
+        weight: 1
+      - path: Icosphere_004
+        weight: 1
+      - path: Icosphere_005
+        weight: 1
+      - path: Icosphere_006
+        weight: 1
+      - path: Icosphere_007
+        weight: 1
+      - path: Icosphere_008
+        weight: 1
+      - path: Icosphere_009
+        weight: 1
+      - path: Sphere
+        weight: 1
+      - path: Sphere_001
+        weight: 1
+      - path: Sphere_002
+        weight: 1
+      - path: Sphere_003
+        weight: 1
+      - path: Sphere_004
+        weight: 1
+      - path: staff
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: idle
+      takeName: idle
+      firstFrame: 0
+      lastFrame: 30
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature_001
+        weight: 1
+      - path: Armature_001/root
+        weight: 1
+      - path: Armature_001/root/leg_L
+        weight: 1
+      - path: Armature_001/root/leg_L/foot_L
+        weight: 1
+      - path: Armature_001/root/leg_R
+        weight: 1
+      - path: Armature_001/root/leg_R/foot_R
+        weight: 1
+      - path: Armature_001/root/neck
+        weight: 1
+      - path: Armature_001/root/neck/head
+        weight: 1
+      - path: Armature_001/root/neck/head/hat
+        weight: 1
+      - path: Armature_001/root/neck/head/lowMouth
+        weight: 1
+      - path: Armature_001/root/neck/head/UpBeard
+        weight: 1
+      - path: Armature_001/root/neck/head/UpBeard/midBeard
+        weight: 1
+      - path: Armature_001/root/neck/head/UpBeard/midBeard/lowBeard
+        weight: 1
+      - path: Armature_001/root/neck/head/upHair
+        weight: 1
+      - path: Armature_001/root/neck/head/upHair/midHair
+        weight: 1
+      - path: Armature_001/root/neck/head/upHair/midHair/lowHair
+        weight: 1
+      - path: Armature_001/root/neck/head/upMouth
+        weight: 1
+      - path: Armature_001/root/upArm_L
+        weight: 1
+      - path: Armature_001/root/upArm_L/lowArm_L
+        weight: 1
+      - path: Armature_001/root/upArm_L/lowArm_L/hand_L
+        weight: 1
+      - path: Armature_001/root/upArm_L/lowArm_L/hand_L/finger_L
+        weight: 1
+      - path: Armature_001/root/upArm_L/lowArm_L/hand_L/thumb_L
+        weight: 1
+      - path: Armature_001/root/upArm_R
+        weight: 1
+      - path: Armature_001/root/upArm_R/lowArm_R
+        weight: 1
+      - path: Armature_001/root/upArm_R/lowArm_R/hand_R
+        weight: 1
+      - path: Armature_001/root/upArm_R/lowArm_R/hand_R/finger_R
+        weight: 1
+      - path: Armature_001/root/upArm_R/lowArm_R/hand_R/thumb_R
+        weight: 1
+      - path: Cylinder
+        weight: 1
+      - path: Icosphere
+        weight: 1
+      - path: Icosphere_001
+        weight: 1
+      - path: Icosphere_002
+        weight: 1
+      - path: Icosphere_003
+        weight: 1
+      - path: Icosphere_004
+        weight: 1
+      - path: Icosphere_005
+        weight: 1
+      - path: Icosphere_006
+        weight: 1
+      - path: Icosphere_007
+        weight: 1
+      - path: Icosphere_008
+        weight: 1
+      - path: Icosphere_009
+        weight: 1
+      - path: Sphere
+        weight: 1
+      - path: Sphere_001
+        weight: 1
+      - path: Sphere_002
+        weight: 1
+      - path: Sphere_003
+        weight: 1
+      - path: Sphere_004
+        weight: 1
+      - path: staff
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: idle_--__run
+      takeName: idle_--__run
+      firstFrame: 50
+      lastFrame: 55
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature_001
+        weight: 1
+      - path: Armature_001/root
+        weight: 1
+      - path: Armature_001/root/leg_L
+        weight: 1
+      - path: Armature_001/root/leg_L/foot_L
+        weight: 1
+      - path: Armature_001/root/leg_R
+        weight: 1
+      - path: Armature_001/root/leg_R/foot_R
+        weight: 1
+      - path: Armature_001/root/neck
+        weight: 1
+      - path: Armature_001/root/neck/head
+        weight: 1
+      - path: Armature_001/root/neck/head/hat
+        weight: 1
+      - path: Armature_001/root/neck/head/lowMouth
+        weight: 1
+      - path: Armature_001/root/neck/head/UpBeard
+        weight: 1
+      - path: Armature_001/root/neck/head/UpBeard/midBeard
+        weight: 1
+      - path: Armature_001/root/neck/head/UpBeard/midBeard/lowBeard
+        weight: 1
+      - path: Armature_001/root/neck/head/upHair
+        weight: 1
+      - path: Armature_001/root/neck/head/upHair/midHair
+        weight: 1
+      - path: Armature_001/root/neck/head/upHair/midHair/lowHair
+        weight: 1
+      - path: Armature_001/root/neck/head/upMouth
+        weight: 1
+      - path: Armature_001/root/upArm_L
+        weight: 1
+      - path: Armature_001/root/upArm_L/lowArm_L
+        weight: 1
+      - path: Armature_001/root/upArm_L/lowArm_L/hand_L
+        weight: 1
+      - path: Armature_001/root/upArm_L/lowArm_L/hand_L/finger_L
+        weight: 1
+      - path: Armature_001/root/upArm_L/lowArm_L/hand_L/thumb_L
+        weight: 1
+      - path: Armature_001/root/upArm_R
+        weight: 1
+      - path: Armature_001/root/upArm_R/lowArm_R
+        weight: 1
+      - path: Armature_001/root/upArm_R/lowArm_R/hand_R
+        weight: 1
+      - path: Armature_001/root/upArm_R/lowArm_R/hand_R/finger_R
+        weight: 1
+      - path: Armature_001/root/upArm_R/lowArm_R/hand_R/thumb_R
+        weight: 1
+      - path: Cylinder
+        weight: 1
+      - path: Icosphere
+        weight: 1
+      - path: Icosphere_001
+        weight: 1
+      - path: Icosphere_002
+        weight: 1
+      - path: Icosphere_003
+        weight: 1
+      - path: Icosphere_004
+        weight: 1
+      - path: Icosphere_005
+        weight: 1
+      - path: Icosphere_006
+        weight: 1
+      - path: Icosphere_007
+        weight: 1
+      - path: Icosphere_008
+        weight: 1
+      - path: Icosphere_009
+        weight: 1
+      - path: Sphere
+        weight: 1
+      - path: Sphere_001
+        weight: 1
+      - path: Sphere_002
+        weight: 1
+      - path: Sphere_003
+        weight: 1
+      - path: Sphere_004
+        weight: 1
+      - path: staff
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: morpheusSummon
+      takeName: morpheusSummon
+      firstFrame: 48
+      lastFrame: 126
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature_001
+        weight: 1
+      - path: Armature_001/root
+        weight: 1
+      - path: Armature_001/root/leg_L
+        weight: 1
+      - path: Armature_001/root/leg_L/foot_L
+        weight: 1
+      - path: Armature_001/root/leg_R
+        weight: 1
+      - path: Armature_001/root/leg_R/foot_R
+        weight: 1
+      - path: Armature_001/root/neck
+        weight: 1
+      - path: Armature_001/root/neck/head
+        weight: 1
+      - path: Armature_001/root/neck/head/hat
+        weight: 1
+      - path: Armature_001/root/neck/head/lowMouth
+        weight: 1
+      - path: Armature_001/root/neck/head/UpBeard
+        weight: 1
+      - path: Armature_001/root/neck/head/UpBeard/midBeard
+        weight: 1
+      - path: Armature_001/root/neck/head/UpBeard/midBeard/lowBeard
+        weight: 1
+      - path: Armature_001/root/neck/head/upHair
+        weight: 1
+      - path: Armature_001/root/neck/head/upHair/midHair
+        weight: 1
+      - path: Armature_001/root/neck/head/upHair/midHair/lowHair
+        weight: 1
+      - path: Armature_001/root/neck/head/upMouth
+        weight: 1
+      - path: Armature_001/root/upArm_L
+        weight: 1
+      - path: Armature_001/root/upArm_L/lowArm_L
+        weight: 1
+      - path: Armature_001/root/upArm_L/lowArm_L/hand_L
+        weight: 1
+      - path: Armature_001/root/upArm_L/lowArm_L/hand_L/finger_L
+        weight: 1
+      - path: Armature_001/root/upArm_L/lowArm_L/hand_L/thumb_L
+        weight: 1
+      - path: Armature_001/root/upArm_R
+        weight: 1
+      - path: Armature_001/root/upArm_R/lowArm_R
+        weight: 1
+      - path: Armature_001/root/upArm_R/lowArm_R/hand_R
+        weight: 1
+      - path: Armature_001/root/upArm_R/lowArm_R/hand_R/finger_R
+        weight: 1
+      - path: Armature_001/root/upArm_R/lowArm_R/hand_R/thumb_R
+        weight: 1
+      - path: Cylinder
+        weight: 1
+      - path: Icosphere
+        weight: 1
+      - path: Icosphere_001
+        weight: 1
+      - path: Icosphere_002
+        weight: 1
+      - path: Icosphere_003
+        weight: 1
+      - path: Icosphere_004
+        weight: 1
+      - path: Icosphere_005
+        weight: 1
+      - path: Icosphere_006
+        weight: 1
+      - path: Icosphere_007
+        weight: 1
+      - path: Icosphere_008
+        weight: 1
+      - path: Icosphere_009
+        weight: 1
+      - path: Sphere
+        weight: 1
+      - path: Sphere_001
+        weight: 1
+      - path: Sphere_002
+        weight: 1
+      - path: Sphere_003
+        weight: 1
+      - path: Sphere_004
+        weight: 1
+      - path: staff
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: run
+      takeName: run
+      firstFrame: 203
+      lastFrame: 227
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature_001
+        weight: 1
+      - path: Armature_001/root
+        weight: 1
+      - path: Armature_001/root/leg_L
+        weight: 1
+      - path: Armature_001/root/leg_L/foot_L
+        weight: 1
+      - path: Armature_001/root/leg_R
+        weight: 1
+      - path: Armature_001/root/leg_R/foot_R
+        weight: 1
+      - path: Armature_001/root/neck
+        weight: 1
+      - path: Armature_001/root/neck/head
+        weight: 1
+      - path: Armature_001/root/neck/head/hat
+        weight: 1
+      - path: Armature_001/root/neck/head/lowMouth
+        weight: 1
+      - path: Armature_001/root/neck/head/UpBeard
+        weight: 1
+      - path: Armature_001/root/neck/head/UpBeard/midBeard
+        weight: 1
+      - path: Armature_001/root/neck/head/UpBeard/midBeard/lowBeard
+        weight: 1
+      - path: Armature_001/root/neck/head/upHair
+        weight: 1
+      - path: Armature_001/root/neck/head/upHair/midHair
+        weight: 1
+      - path: Armature_001/root/neck/head/upHair/midHair/lowHair
+        weight: 1
+      - path: Armature_001/root/neck/head/upMouth
+        weight: 1
+      - path: Armature_001/root/upArm_L
+        weight: 1
+      - path: Armature_001/root/upArm_L/lowArm_L
+        weight: 1
+      - path: Armature_001/root/upArm_L/lowArm_L/hand_L
+        weight: 1
+      - path: Armature_001/root/upArm_L/lowArm_L/hand_L/finger_L
+        weight: 1
+      - path: Armature_001/root/upArm_L/lowArm_L/hand_L/thumb_L
+        weight: 1
+      - path: Armature_001/root/upArm_R
+        weight: 1
+      - path: Armature_001/root/upArm_R/lowArm_R
+        weight: 1
+      - path: Armature_001/root/upArm_R/lowArm_R/hand_R
+        weight: 1
+      - path: Armature_001/root/upArm_R/lowArm_R/hand_R/finger_R
+        weight: 1
+      - path: Armature_001/root/upArm_R/lowArm_R/hand_R/thumb_R
+        weight: 1
+      - path: Cylinder
+        weight: 1
+      - path: Icosphere
+        weight: 1
+      - path: Icosphere_001
+        weight: 1
+      - path: Icosphere_002
+        weight: 1
+      - path: Icosphere_003
+        weight: 1
+      - path: Icosphere_004
+        weight: 1
+      - path: Icosphere_005
+        weight: 1
+      - path: Icosphere_006
+        weight: 1
+      - path: Icosphere_007
+        weight: 1
+      - path: Icosphere_008
+        weight: 1
+      - path: Icosphere_009
+        weight: 1
+      - path: Sphere
+        weight: 1
+      - path: Sphere_001
+        weight: 1
+      - path: Sphere_002
+        weight: 1
+      - path: Sphere_003
+        weight: 1
+      - path: Sphere_004
+        weight: 1
+      - path: staff
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 203
+    - serializedVersion: 16
+      name: singleJump
+      takeName: singleJump
+      firstFrame: 143
+      lastFrame: 169
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature_001
+        weight: 1
+      - path: Armature_001/root
+        weight: 1
+      - path: Armature_001/root/leg_L
+        weight: 1
+      - path: Armature_001/root/leg_L/foot_L
+        weight: 1
+      - path: Armature_001/root/leg_R
+        weight: 1
+      - path: Armature_001/root/leg_R/foot_R
+        weight: 1
+      - path: Armature_001/root/neck
+        weight: 1
+      - path: Armature_001/root/neck/head
+        weight: 1
+      - path: Armature_001/root/neck/head/hat
+        weight: 1
+      - path: Armature_001/root/neck/head/lowMouth
+        weight: 1
+      - path: Armature_001/root/neck/head/UpBeard
+        weight: 1
+      - path: Armature_001/root/neck/head/UpBeard/midBeard
+        weight: 1
+      - path: Armature_001/root/neck/head/UpBeard/midBeard/lowBeard
+        weight: 1
+      - path: Armature_001/root/neck/head/upHair
+        weight: 1
+      - path: Armature_001/root/neck/head/upHair/midHair
+        weight: 1
+      - path: Armature_001/root/neck/head/upHair/midHair/lowHair
+        weight: 1
+      - path: Armature_001/root/neck/head/upMouth
+        weight: 1
+      - path: Armature_001/root/upArm_L
+        weight: 1
+      - path: Armature_001/root/upArm_L/lowArm_L
+        weight: 1
+      - path: Armature_001/root/upArm_L/lowArm_L/hand_L
+        weight: 1
+      - path: Armature_001/root/upArm_L/lowArm_L/hand_L/finger_L
+        weight: 1
+      - path: Armature_001/root/upArm_L/lowArm_L/hand_L/thumb_L
+        weight: 1
+      - path: Armature_001/root/upArm_R
+        weight: 1
+      - path: Armature_001/root/upArm_R/lowArm_R
+        weight: 1
+      - path: Armature_001/root/upArm_R/lowArm_R/hand_R
+        weight: 1
+      - path: Armature_001/root/upArm_R/lowArm_R/hand_R/finger_R
+        weight: 1
+      - path: Armature_001/root/upArm_R/lowArm_R/hand_R/thumb_R
+        weight: 1
+      - path: Cylinder
+        weight: 1
+      - path: Icosphere
+        weight: 1
+      - path: Icosphere_001
+        weight: 1
+      - path: Icosphere_002
+        weight: 1
+      - path: Icosphere_003
+        weight: 1
+      - path: Icosphere_004
+        weight: 1
+      - path: Icosphere_005
+        weight: 1
+      - path: Icosphere_006
+        weight: 1
+      - path: Icosphere_007
+        weight: 1
+      - path: Icosphere_008
+        weight: 1
+      - path: Icosphere_009
+        weight: 1
+      - path: Sphere
+        weight: 1
+      - path: Sphere_001
+        weight: 1
+      - path: Sphere_002
+        weight: 1
+      - path: Sphere_003
+        weight: 1
+      - path: Sphere_004
+        weight: 1
+      - path: staff
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: singleJump_--__idle
+      takeName: singleJump_--__idle
+      firstFrame: 181
+      lastFrame: 184
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature_001
+        weight: 1
+      - path: Armature_001/root
+        weight: 1
+      - path: Armature_001/root/leg_L
+        weight: 1
+      - path: Armature_001/root/leg_L/foot_L
+        weight: 1
+      - path: Armature_001/root/leg_R
+        weight: 1
+      - path: Armature_001/root/leg_R/foot_R
+        weight: 1
+      - path: Armature_001/root/neck
+        weight: 1
+      - path: Armature_001/root/neck/head
+        weight: 1
+      - path: Armature_001/root/neck/head/hat
+        weight: 1
+      - path: Armature_001/root/neck/head/lowMouth
+        weight: 1
+      - path: Armature_001/root/neck/head/UpBeard
+        weight: 1
+      - path: Armature_001/root/neck/head/UpBeard/midBeard
+        weight: 1
+      - path: Armature_001/root/neck/head/UpBeard/midBeard/lowBeard
+        weight: 1
+      - path: Armature_001/root/neck/head/upHair
+        weight: 1
+      - path: Armature_001/root/neck/head/upHair/midHair
+        weight: 1
+      - path: Armature_001/root/neck/head/upHair/midHair/lowHair
+        weight: 1
+      - path: Armature_001/root/neck/head/upMouth
+        weight: 1
+      - path: Armature_001/root/upArm_L
+        weight: 1
+      - path: Armature_001/root/upArm_L/lowArm_L
+        weight: 1
+      - path: Armature_001/root/upArm_L/lowArm_L/hand_L
+        weight: 1
+      - path: Armature_001/root/upArm_L/lowArm_L/hand_L/finger_L
+        weight: 1
+      - path: Armature_001/root/upArm_L/lowArm_L/hand_L/thumb_L
+        weight: 1
+      - path: Armature_001/root/upArm_R
+        weight: 1
+      - path: Armature_001/root/upArm_R/lowArm_R
+        weight: 1
+      - path: Armature_001/root/upArm_R/lowArm_R/hand_R
+        weight: 1
+      - path: Armature_001/root/upArm_R/lowArm_R/hand_R/finger_R
+        weight: 1
+      - path: Armature_001/root/upArm_R/lowArm_R/hand_R/thumb_R
+        weight: 1
+      - path: Cylinder
+        weight: 1
+      - path: Icosphere
+        weight: 1
+      - path: Icosphere_001
+        weight: 1
+      - path: Icosphere_002
+        weight: 1
+      - path: Icosphere_003
+        weight: 1
+      - path: Icosphere_004
+        weight: 1
+      - path: Icosphere_005
+        weight: 1
+      - path: Icosphere_006
+        weight: 1
+      - path: Icosphere_007
+        weight: 1
+      - path: Icosphere_008
+        weight: 1
+      - path: Icosphere_009
+        weight: 1
+      - path: Sphere
+        weight: 1
+      - path: Sphere_001
+        weight: 1
+      - path: Sphere_002
+        weight: 1
+      - path: Sphere_003
+        weight: 1
+      - path: Sphere_004
+        weight: 1
+      - path: staff
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: staffSlam
+      takeName: staffSlam
+      firstFrame: 247
+      lastFrame: 286
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature_001
+        weight: 1
+      - path: Armature_001/root
+        weight: 1
+      - path: Armature_001/root/leg_L
+        weight: 1
+      - path: Armature_001/root/leg_L/foot_L
+        weight: 1
+      - path: Armature_001/root/leg_R
+        weight: 1
+      - path: Armature_001/root/leg_R/foot_R
+        weight: 1
+      - path: Armature_001/root/neck
+        weight: 1
+      - path: Armature_001/root/neck/head
+        weight: 1
+      - path: Armature_001/root/neck/head/hat
+        weight: 1
+      - path: Armature_001/root/neck/head/lowMouth
+        weight: 1
+      - path: Armature_001/root/neck/head/UpBeard
+        weight: 1
+      - path: Armature_001/root/neck/head/UpBeard/midBeard
+        weight: 1
+      - path: Armature_001/root/neck/head/UpBeard/midBeard/lowBeard
+        weight: 1
+      - path: Armature_001/root/neck/head/upHair
+        weight: 1
+      - path: Armature_001/root/neck/head/upHair/midHair
+        weight: 1
+      - path: Armature_001/root/neck/head/upHair/midHair/lowHair
+        weight: 1
+      - path: Armature_001/root/neck/head/upMouth
+        weight: 1
+      - path: Armature_001/root/upArm_L
+        weight: 1
+      - path: Armature_001/root/upArm_L/lowArm_L
+        weight: 1
+      - path: Armature_001/root/upArm_L/lowArm_L/hand_L
+        weight: 1
+      - path: Armature_001/root/upArm_L/lowArm_L/hand_L/finger_L
+        weight: 1
+      - path: Armature_001/root/upArm_L/lowArm_L/hand_L/thumb_L
+        weight: 1
+      - path: Armature_001/root/upArm_R
+        weight: 1
+      - path: Armature_001/root/upArm_R/lowArm_R
+        weight: 1
+      - path: Armature_001/root/upArm_R/lowArm_R/hand_R
+        weight: 1
+      - path: Armature_001/root/upArm_R/lowArm_R/hand_R/finger_R
+        weight: 1
+      - path: Armature_001/root/upArm_R/lowArm_R/hand_R/thumb_R
+        weight: 1
+      - path: Cylinder
+        weight: 1
+      - path: Icosphere
+        weight: 1
+      - path: Icosphere_001
+        weight: 1
+      - path: Icosphere_002
+        weight: 1
+      - path: Icosphere_003
+        weight: 1
+      - path: Icosphere_004
+        weight: 1
+      - path: Icosphere_005
+        weight: 1
+      - path: Icosphere_006
+        weight: 1
+      - path: Icosphere_007
+        weight: 1
+      - path: Icosphere_008
+        weight: 1
+      - path: Icosphere_009
+        weight: 1
+      - path: Sphere
+        weight: 1
+      - path: Sphere_001
+        weight: 1
+      - path: Sphere_002
+        weight: 1
+      - path: Sphere_003
+        weight: 1
+      - path: Sphere_004
+        weight: 1
+      - path: staff
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: T
+      takeName: T
+      firstFrame: 0
+      lastFrame: 1
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature_001
+        weight: 1
+      - path: Armature_001/root
+        weight: 1
+      - path: Armature_001/root/leg_L
+        weight: 1
+      - path: Armature_001/root/leg_L/foot_L
+        weight: 1
+      - path: Armature_001/root/leg_R
+        weight: 1
+      - path: Armature_001/root/leg_R/foot_R
+        weight: 1
+      - path: Armature_001/root/neck
+        weight: 1
+      - path: Armature_001/root/neck/head
+        weight: 1
+      - path: Armature_001/root/neck/head/hat
+        weight: 1
+      - path: Armature_001/root/neck/head/lowMouth
+        weight: 1
+      - path: Armature_001/root/neck/head/UpBeard
+        weight: 1
+      - path: Armature_001/root/neck/head/UpBeard/midBeard
+        weight: 1
+      - path: Armature_001/root/neck/head/UpBeard/midBeard/lowBeard
+        weight: 1
+      - path: Armature_001/root/neck/head/upHair
+        weight: 1
+      - path: Armature_001/root/neck/head/upHair/midHair
+        weight: 1
+      - path: Armature_001/root/neck/head/upHair/midHair/lowHair
+        weight: 1
+      - path: Armature_001/root/neck/head/upMouth
+        weight: 1
+      - path: Armature_001/root/upArm_L
+        weight: 1
+      - path: Armature_001/root/upArm_L/lowArm_L
+        weight: 1
+      - path: Armature_001/root/upArm_L/lowArm_L/hand_L
+        weight: 1
+      - path: Armature_001/root/upArm_L/lowArm_L/hand_L/finger_L
+        weight: 1
+      - path: Armature_001/root/upArm_L/lowArm_L/hand_L/thumb_L
+        weight: 1
+      - path: Armature_001/root/upArm_R
+        weight: 1
+      - path: Armature_001/root/upArm_R/lowArm_R
+        weight: 1
+      - path: Armature_001/root/upArm_R/lowArm_R/hand_R
+        weight: 1
+      - path: Armature_001/root/upArm_R/lowArm_R/hand_R/finger_R
+        weight: 1
+      - path: Armature_001/root/upArm_R/lowArm_R/hand_R/thumb_R
+        weight: 1
+      - path: Cylinder
+        weight: 1
+      - path: Icosphere
+        weight: 1
+      - path: Icosphere_001
+        weight: 1
+      - path: Icosphere_002
+        weight: 1
+      - path: Icosphere_003
+        weight: 1
+      - path: Icosphere_004
+        weight: 1
+      - path: Icosphere_005
+        weight: 1
+      - path: Icosphere_006
+        weight: 1
+      - path: Icosphere_007
+        weight: 1
+      - path: Icosphere_008
+        weight: 1
+      - path: Icosphere_009
+        weight: 1
+      - path: Sphere
+        weight: 1
+      - path: Sphere_001
+        weight: 1
+      - path: Sphere_002
+        weight: 1
+      - path: Sphere_003
+        weight: 1
+      - path: Sphere_004
+        weight: 1
+      - path: staff
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: talking
+      takeName: talking
+      firstFrame: 306
+      lastFrame: 475
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature_001
+        weight: 1
+      - path: Armature_001/root
+        weight: 1
+      - path: Armature_001/root/leg_L
+        weight: 1
+      - path: Armature_001/root/leg_L/foot_L
+        weight: 1
+      - path: Armature_001/root/leg_R
+        weight: 1
+      - path: Armature_001/root/leg_R/foot_R
+        weight: 1
+      - path: Armature_001/root/neck
+        weight: 1
+      - path: Armature_001/root/neck/head
+        weight: 1
+      - path: Armature_001/root/neck/head/hat
+        weight: 1
+      - path: Armature_001/root/neck/head/lowMouth
+        weight: 1
+      - path: Armature_001/root/neck/head/UpBeard
+        weight: 1
+      - path: Armature_001/root/neck/head/UpBeard/midBeard
+        weight: 1
+      - path: Armature_001/root/neck/head/UpBeard/midBeard/lowBeard
+        weight: 1
+      - path: Armature_001/root/neck/head/upHair
+        weight: 1
+      - path: Armature_001/root/neck/head/upHair/midHair
+        weight: 1
+      - path: Armature_001/root/neck/head/upHair/midHair/lowHair
+        weight: 1
+      - path: Armature_001/root/neck/head/upMouth
+        weight: 1
+      - path: Armature_001/root/upArm_L
+        weight: 1
+      - path: Armature_001/root/upArm_L/lowArm_L
+        weight: 1
+      - path: Armature_001/root/upArm_L/lowArm_L/hand_L
+        weight: 1
+      - path: Armature_001/root/upArm_L/lowArm_L/hand_L/finger_L
+        weight: 1
+      - path: Armature_001/root/upArm_L/lowArm_L/hand_L/thumb_L
+        weight: 1
+      - path: Armature_001/root/upArm_R
+        weight: 1
+      - path: Armature_001/root/upArm_R/lowArm_R
+        weight: 1
+      - path: Armature_001/root/upArm_R/lowArm_R/hand_R
+        weight: 1
+      - path: Armature_001/root/upArm_R/lowArm_R/hand_R/finger_R
+        weight: 1
+      - path: Armature_001/root/upArm_R/lowArm_R/hand_R/thumb_R
+        weight: 1
+      - path: Cylinder
+        weight: 1
+      - path: Icosphere
+        weight: 1
+      - path: Icosphere_001
+        weight: 1
+      - path: Icosphere_002
+        weight: 1
+      - path: Icosphere_003
+        weight: 1
+      - path: Icosphere_004
+        weight: 1
+      - path: Icosphere_005
+        weight: 1
+      - path: Icosphere_006
+        weight: 1
+      - path: Icosphere_007
+        weight: 1
+      - path: Icosphere_008
+        weight: 1
+      - path: Icosphere_009
+        weight: 1
+      - path: Sphere
+        weight: 1
+      - path: Sphere_001
+        weight: 1
+      - path: Sphere_002
+        weight: 1
+      - path: Sphere_003
+        weight: 1
+      - path: Sphere_004
+        weight: 1
+      - path: staff
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: walk
+      takeName: walk
+      firstFrame: 502
+      lastFrame: 528
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature_001
+        weight: 1
+      - path: Armature_001/root
+        weight: 1
+      - path: Armature_001/root/leg_L
+        weight: 1
+      - path: Armature_001/root/leg_L/foot_L
+        weight: 1
+      - path: Armature_001/root/leg_R
+        weight: 1
+      - path: Armature_001/root/leg_R/foot_R
+        weight: 1
+      - path: Armature_001/root/neck
+        weight: 1
+      - path: Armature_001/root/neck/head
+        weight: 1
+      - path: Armature_001/root/neck/head/hat
+        weight: 1
+      - path: Armature_001/root/neck/head/lowMouth
+        weight: 1
+      - path: Armature_001/root/neck/head/UpBeard
+        weight: 1
+      - path: Armature_001/root/neck/head/UpBeard/midBeard
+        weight: 1
+      - path: Armature_001/root/neck/head/UpBeard/midBeard/lowBeard
+        weight: 1
+      - path: Armature_001/root/neck/head/upHair
+        weight: 1
+      - path: Armature_001/root/neck/head/upHair/midHair
+        weight: 1
+      - path: Armature_001/root/neck/head/upHair/midHair/lowHair
+        weight: 1
+      - path: Armature_001/root/neck/head/upMouth
+        weight: 1
+      - path: Armature_001/root/upArm_L
+        weight: 1
+      - path: Armature_001/root/upArm_L/lowArm_L
+        weight: 1
+      - path: Armature_001/root/upArm_L/lowArm_L/hand_L
+        weight: 1
+      - path: Armature_001/root/upArm_L/lowArm_L/hand_L/finger_L
+        weight: 1
+      - path: Armature_001/root/upArm_L/lowArm_L/hand_L/thumb_L
+        weight: 1
+      - path: Armature_001/root/upArm_R
+        weight: 1
+      - path: Armature_001/root/upArm_R/lowArm_R
+        weight: 1
+      - path: Armature_001/root/upArm_R/lowArm_R/hand_R
+        weight: 1
+      - path: Armature_001/root/upArm_R/lowArm_R/hand_R/finger_R
+        weight: 1
+      - path: Armature_001/root/upArm_R/lowArm_R/hand_R/thumb_R
+        weight: 1
+      - path: Cylinder
+        weight: 1
+      - path: Icosphere
+        weight: 1
+      - path: Icosphere_001
+        weight: 1
+      - path: Icosphere_002
+        weight: 1
+      - path: Icosphere_003
+        weight: 1
+      - path: Icosphere_004
+        weight: 1
+      - path: Icosphere_005
+        weight: 1
+      - path: Icosphere_006
+        weight: 1
+      - path: Icosphere_007
+        weight: 1
+      - path: Icosphere_008
+        weight: 1
+      - path: Icosphere_009
+        weight: 1
+      - path: Sphere
+        weight: 1
+      - path: Sphere_001
+        weight: 1
+      - path: Sphere_002
+        weight: 1
+      - path: Sphere_003
+        weight: 1
+      - path: Sphere_004
+        weight: 1
+      - path: staff
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 502
+    - serializedVersion: 16
+      name: wave
+      takeName: wave
+      firstFrame: 0
+      lastFrame: 636
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature_001
+        weight: 1
+      - path: Armature_001/root
+        weight: 1
+      - path: Armature_001/root/leg_L
+        weight: 1
+      - path: Armature_001/root/leg_L/foot_L
+        weight: 1
+      - path: Armature_001/root/leg_R
+        weight: 1
+      - path: Armature_001/root/leg_R/foot_R
+        weight: 1
+      - path: Armature_001/root/neck
+        weight: 1
+      - path: Armature_001/root/neck/head
+        weight: 1
+      - path: Armature_001/root/neck/head/hat
+        weight: 1
+      - path: Armature_001/root/neck/head/lowMouth
+        weight: 1
+      - path: Armature_001/root/neck/head/UpBeard
+        weight: 1
+      - path: Armature_001/root/neck/head/UpBeard/midBeard
+        weight: 1
+      - path: Armature_001/root/neck/head/UpBeard/midBeard/lowBeard
+        weight: 1
+      - path: Armature_001/root/neck/head/upHair
+        weight: 1
+      - path: Armature_001/root/neck/head/upHair/midHair
+        weight: 1
+      - path: Armature_001/root/neck/head/upHair/midHair/lowHair
+        weight: 1
+      - path: Armature_001/root/neck/head/upMouth
+        weight: 1
+      - path: Armature_001/root/upArm_L
+        weight: 1
+      - path: Armature_001/root/upArm_L/lowArm_L
+        weight: 1
+      - path: Armature_001/root/upArm_L/lowArm_L/hand_L
+        weight: 1
+      - path: Armature_001/root/upArm_L/lowArm_L/hand_L/finger_L
+        weight: 1
+      - path: Armature_001/root/upArm_L/lowArm_L/hand_L/thumb_L
+        weight: 1
+      - path: Armature_001/root/upArm_R
+        weight: 1
+      - path: Armature_001/root/upArm_R/lowArm_R
+        weight: 1
+      - path: Armature_001/root/upArm_R/lowArm_R/hand_R
+        weight: 1
+      - path: Armature_001/root/upArm_R/lowArm_R/hand_R/finger_R
+        weight: 1
+      - path: Armature_001/root/upArm_R/lowArm_R/hand_R/thumb_R
+        weight: 1
+      - path: Cylinder
+        weight: 1
+      - path: Icosphere
+        weight: 1
+      - path: Icosphere_001
+        weight: 1
+      - path: Icosphere_002
+        weight: 1
+      - path: Icosphere_003
+        weight: 1
+      - path: Icosphere_004
+        weight: 1
+      - path: Icosphere_005
+        weight: 1
+      - path: Icosphere_006
+        weight: 1
+      - path: Icosphere_007
+        weight: 1
+      - path: Icosphere_008
+        weight: 1
+      - path: Icosphere_009
+        weight: 1
+      - path: Sphere
+        weight: 1
+      - path: Sphere_001
+        weight: 1
+      - path: Sphere_002
+        weight: 1
+      - path: Sphere_003
+        weight: 1
+      - path: Sphere_004
+        weight: 1
+      - path: staff
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
     isReadable: 1
   meshes:
     lODScreenPercentages: []
