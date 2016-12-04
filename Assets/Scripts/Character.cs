@@ -10,7 +10,7 @@ public class Character : MonoBehaviour {
 
     static int CURR_WEAPON = 0;
     static bool[] UNLOCKED_WEAPONS = { true, false, false };
-
+    static bool[] UNLOCKED_COMPANIONS = { false, false };
 
     private bool canTakeDamage = true;
 
@@ -41,6 +41,19 @@ public class Character : MonoBehaviour {
         set
         {
             UNLOCKED_WEAPONS = value;
+        }
+    }
+
+    public bool[] GetUnlockedCompanions
+    {
+        get
+        {
+            return UNLOCKED_COMPANIONS;
+        }
+
+        set
+        {
+            UNLOCKED_COMPANIONS = value;
         }
     }
     #endregion
@@ -115,6 +128,15 @@ public class Character : MonoBehaviour {
         if (index <= UNLOCKED_WEAPONS.Length)
         {
             UNLOCKED_WEAPONS[index] = true;
+        }
+    }
+
+    public void AddCompanion(int index)
+    {
+        Debug.Log("Companion Found");
+        if (index <= UNLOCKED_COMPANIONS.Length)
+        {
+            UNLOCKED_COMPANIONS[index] = true;
         }
     }
 

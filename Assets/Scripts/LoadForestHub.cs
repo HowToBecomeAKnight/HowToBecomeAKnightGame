@@ -1,14 +1,25 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class LoadForestHub : MonoBehaviour
 {
+    GameObject player;
+
+    GameObject companion;
 
     // Use this for initialization
-    void Start() { }
+    void Start()
+    {
+        player = GameObject.FindGameObjectWithTag("Player");
+        companion = GameObject.FindGameObjectWithTag("Companion");
+    }
 
     // Update is called once per frame
-    void Update() { }
+    void Update()
+    {
+        
+    }
 
     void OnTriggerEnter(Collider other)
     {
@@ -17,7 +28,7 @@ public class LoadForestHub : MonoBehaviour
         if (other.gameObject.tag == "Player")
         {
             Debug.Log("Load Foresthub");
-            Application.LoadLevel("ForestHub");
+            SceneManager.LoadScene("ForestHub");
         }
     }
 }
