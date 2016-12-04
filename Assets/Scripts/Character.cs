@@ -7,6 +7,10 @@ public class Character : MonoBehaviour {
 
     public Image HealthBar;
 
+    static int CURR_WEAPON = 0;
+    static bool[] UNLOCKED_WEAPONS = { true, false, false };
+
+
     private bool canTakeDamage = true;
 
     private float damageWaitTime = 0.7f;
@@ -17,6 +21,8 @@ public class Character : MonoBehaviour {
 
     private NavMeshAgent agent;
 
+    private GameObject weaponsObject;
+
     public bool finishedLevel = false;
 
     public GameObject lever;
@@ -26,15 +32,31 @@ public class Character : MonoBehaviour {
     void Start () {
         agent = GetComponentInChildren<NavMeshAgent>();
         player = GameObject.FindGameObjectWithTag("Player");
+        weaponsObject = GameObject.FindGameObjectWithTag("WeaponsObject");
         checkPoint = GameObject.FindWithTag("StartSpawn").transform;
         HealthBar.fillAmount = 1.0f;
 
         gameObject.GetComponent<NavMeshAgent>().enabled = false;
 
     }
-	
-	// Update is called once per frame
-	void Update () {
+
+    // Update is called once per frame
+    void Update() {
+        
+        if (Input.GetKeyDown(KeyCode.Alpha1))
+        {
+            SetWeapon(0);
+        }
+
+        if (Input.GetKeyDown(KeyCode.Alpha2))
+        {
+            SetWeapon(1);
+        }
+
+        if (Input.GetKeyDown(KeyCode.Alpha3))
+        {
+            SetWeapon(2);
+        }
 
         if (finishedLevel)
         {
@@ -68,6 +90,34 @@ public class Character : MonoBehaviour {
     public float GetHealth()
     {
         return HealthBar.fillAmount;
+    }
+
+    public void AddWeapon(int index)
+    {
+        Debug.Log("ayy");
+        if (index <= UNLOCKED_WEAPONS.Length)
+        {
+            UNLOCKED_WEAPONS[index] = true;
+        }
+    }
+
+    void SetWeapon(int index)
+    {
+        if (UNLOCKED_WEAPONS[index])
+        {
+            CURR_WEAPON = index;
+            for (int i = 0; i < this.weaponsObject.transform.childCount; i++)
+            {
+                if (i != CURR_WEAPON)
+                {
+                    this.weaponsObject.transform.GetChild(i).gameObject.SetActive(false);
+                }
+                else
+                {
+                    this.weaponsObject.transform.GetChild(i).gameObject.SetActive(true);
+                }
+            }
+        }
     }
 
     void OnTriggerEnter(Collider col)
