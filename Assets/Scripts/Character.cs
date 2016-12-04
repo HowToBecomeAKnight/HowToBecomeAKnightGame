@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class Character : MonoBehaviour {
 
+    #region Variables
     public Image HealthBar;
 
     static int CURR_WEAPON = 0;
@@ -27,6 +28,22 @@ public class Character : MonoBehaviour {
 
     public GameObject lever;
     public GameObject teleportToHere;
+    #endregion
+
+    #region Properties
+    public bool[] GetUnlockedWeapons
+    {
+        get
+        {
+            return UNLOCKED_WEAPONS;
+        }
+
+        set
+        {
+            UNLOCKED_WEAPONS = value;
+        }
+    }
+    #endregion
 
     // Use this for initialization
     void Start () {

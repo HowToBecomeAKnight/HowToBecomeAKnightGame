@@ -13,6 +13,12 @@ public class weapon : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
+        //If player reloads level and owns the weapon destory it
+        if(player.GetComponent<Character>().GetUnlockedWeapons[weaponId])
+        {
+            Destroy(gameObject);
+        }
+
         float distance = Vector3.Distance(transform.position, player.position);
         if (distance < 10.0f)
         {
