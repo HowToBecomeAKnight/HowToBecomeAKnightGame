@@ -11,6 +11,8 @@ public class Animations : MonoBehaviour
     private bool weaponEqipped = true;
     GameObject weapon;
 
+    public AudioSource swing;
+
     // Use this for initialization
     void Start()
     {
@@ -32,14 +34,17 @@ public class Animations : MonoBehaviour
         //Left click attack, slice attack
         if (Input.GetMouseButtonDown(0) && weaponEqipped) 
         {
+            swing.PlayDelayed((float)(0.3));
             collider.isTrigger = false;
             anim.SetTrigger("Slice Attack");
             Debug.Log("Slice Attack");
+
         }
         
         //right click stab attack
         else if (Input.GetMouseButtonDown(1) && weaponEqipped)
         {
+            swing.PlayDelayed((float)(0.8));
             collider.isTrigger = false;
             anim.SetTrigger("Stab Attack");
             Debug.Log("Stab Attack");
