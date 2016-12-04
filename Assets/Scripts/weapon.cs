@@ -18,7 +18,7 @@ public class weapon : MonoBehaviour {
         {
             if (Vector3.Angle(player.transform.forward, transform.position - player.transform.position) < 90f)
             {
-                if (Input.GetKeyDown(KeyCode.F))
+                if (Input.GetKeyDown(KeyCode.G))
                 {
                     player.GetComponent<Character>().AddWeapon(weaponId);
                     Destroy(gameObject);
