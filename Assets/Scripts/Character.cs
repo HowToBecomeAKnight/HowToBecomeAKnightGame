@@ -23,6 +23,7 @@ public class Character : MonoBehaviour {
     private NavMeshAgent agent;
 
     private GameObject weaponsObject;
+    private GameObject weaponsUIObject;
 
     public bool finishedLevel = false;
 
@@ -63,16 +64,17 @@ public class Character : MonoBehaviour {
         agent = GetComponentInChildren<NavMeshAgent>();
         player = GameObject.FindGameObjectWithTag("Player");
         weaponsObject = GameObject.FindGameObjectWithTag("WeaponsObject");
+        weaponsUIObject = GameObject.FindGameObjectWithTag("WeaponsUIObject");
         checkPoint = GameObject.FindWithTag("StartSpawn").transform;
         HealthBar.fillAmount = 1.0f;
-
+        SetWeapon(CURR_WEAPON);
+        UpdateWeaponUI();
         gameObject.GetComponent<NavMeshAgent>().enabled = false;
 
     }
 
     // Update is called once per frame
     void Update() {
-        
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
             SetWeapon(0);
@@ -122,13 +124,28 @@ public class Character : MonoBehaviour {
         return HealthBar.fillAmount;
     }
 
+    public void UpdateWeaponUI()
+    {
+        for (int i = 0; i < this.weaponsUIObject.transform.childCount; i++)
+        {
+            if (!UNLOCKED_WEAPONS[i])
+            {
+                this.weaponsUIObject.transform.GetChild(i).gameObject.SetActive(false);
+            }
+            else
+            {
+                this.weaponsUIObject.transform.GetChild(i).gameObject.SetActive(true);
+            }
+        }
+    }
+
     public void AddWeapon(int index)
     {
-        Debug.Log("ayy");
         if (index <= UNLOCKED_WEAPONS.Length)
         {
             UNLOCKED_WEAPONS[index] = true;
         }
+        UpdateWeaponUI();
     }
 
     public void AddCompanion(int index)
@@ -150,10 +167,12 @@ public class Character : MonoBehaviour {
                 if (i != CURR_WEAPON)
                 {
                     this.weaponsObject.transform.GetChild(i).gameObject.SetActive(false);
+                    this.weaponsUIObject.transform.GetChild(i).gameObject.GetComponent<Image>().color = new Color(1, 1, 1, 0.3f);
                 }
                 else
                 {
                     this.weaponsObject.transform.GetChild(i).gameObject.SetActive(true);
+                    this.weaponsUIObject.transform.GetChild(i).gameObject.GetComponent<Image>().color = new Color(1, 0, 0, 0.3f);
                 }
             }
         }
