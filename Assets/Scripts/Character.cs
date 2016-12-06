@@ -12,6 +12,7 @@ public class Character : MonoBehaviour {
     static bool[] UNLOCKED_WEAPONS = { true, false, false };
     static bool[] UNLOCKED_COMPANIONS = { false, false };
     static bool[] COMPLETED_LEVELS = { false, false, false };
+    static bool SHOW_MENU = true;
 
     private bool canTakeDamage = true;
 
@@ -34,6 +35,19 @@ public class Character : MonoBehaviour {
     #endregion
 
     #region Properties
+    public bool GetShowMenu
+    {
+        get
+        {
+            return SHOW_MENU;
+        }
+
+        set
+        {
+            SHOW_MENU = value;
+        }
+    }
+
     public bool[] GetUnlockedWeapons
     {
         get

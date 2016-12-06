@@ -13,13 +13,17 @@ public class Menu : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+        if (!character.GetComponent<Character>().GetShowMenu)
+        {
+            gameObject.SetActive(false);
+            return;
+        }
         characterUI.SetActive(false);
         startText = startText.GetComponent<Button>();
         quitText = quitText.GetComponent<Button>();
         character.GetComponent<NormalMovement>().enabled = false;
         character.GetComponent<Animations>().enabled = false;
         character.GetComponent<Character>().enabled = false;
-
 
     }
 
@@ -31,6 +35,7 @@ public class Menu : MonoBehaviour
         character.GetComponent<NormalMovement>().enabled = true;
         character.GetComponent<Animations>().enabled = true;
         character.GetComponent<Character>().enabled = true;
+        character.GetComponent<Character>().GetShowMenu = false;
     }
 
     public void onExitGame()
