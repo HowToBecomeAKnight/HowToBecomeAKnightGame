@@ -138,13 +138,11 @@ public class Character : MonoBehaviour {
 
     public void RemoveHealth(float amount)
     {
-        //TODO: do some sort of animation
         HealthBar.fillAmount -= amount;
     }
 
     public void AddHealth(float amount)
     {
-        //TODO: do some sort of animation
         HealthBar.fillAmount += amount;
     }
 

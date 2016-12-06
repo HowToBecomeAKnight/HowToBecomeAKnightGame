@@ -7,8 +7,8 @@ public class Animations : MonoBehaviour
     Animator anim;
     private CharacterController controller;
     BoxCollider collider;
+    Character character;
     private bool onGround;
-    private bool weaponEqipped = true;
     GameObject weapon;
 
     public AudioSource swing;
@@ -24,11 +24,15 @@ public class Animations : MonoBehaviour
         anim = GetComponent<Animator>();
         //get controller on character
         controller = GetComponent<CharacterController>();
-
         weapon = GameObject.FindWithTag("Weapon");
-        collider = weapon.GetComponent<BoxCollider>();
-        //Disable the collider on the weapon untill the player swings it
-        collider.isTrigger = true;
+        character = GetComponent<Character>();
+        //Disable the collider on the weapon until the player swings it
+        getWeaponCollider().isTrigger = true;
+    }
+
+    BoxCollider getWeaponCollider()
+    {
+        return character.GetCurrentWeapon.GetComponent<BoxCollider>();
     }
 
     // Update is called once per frame
@@ -36,20 +40,20 @@ public class Animations : MonoBehaviour
     {
 
         //Left click attack, slice attack
-        if (Input.GetMouseButtonDown(0) && weaponEqipped) 
+        if (Input.GetMouseButtonDown(0) && character.GetCurrentWeapon.activeSelf) 
         {
             swing.PlayDelayed((float)(0.3));
-            collider.isTrigger = false;
+            getWeaponCollider().isTrigger = false;
             anim.SetTrigger("Slice Attack");
             Debug.Log("Slice Attack");
 
         }
         
         //right click stab attack
-        else if (Input.GetMouseButtonDown(1) && weaponEqipped)
+        else if (Input.GetMouseButtonDown(1) && character.GetCurrentWeapon.activeSelf)
         {
             swing.PlayDelayed((float)(0.8));
-            collider.isTrigger = false;
+            getWeaponCollider().isTrigger = false;
             anim.SetTrigger("Stab Attack");
             Debug.Log("Stab Attack");
         }
@@ -108,17 +112,15 @@ public class Animations : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.R))
         {
-            if(weaponEqipped)
+            if (character.GetCurrentWeapon.activeSelf)
             {
                 anim.SetBool("Equipped Weapon", false);
-                weapon.SetActive(false);
-                weaponEqipped = false;
+                character.GetCurrentWeapon.SetActive(false);
             }
             else
             {
                 anim.SetBool("Equipped Weapon", true);
-                weapon.SetActive(true);
-                weaponEqipped = true;
+                character.GetCurrentWeapon.SetActive(true);
             }
         }
         
@@ -126,6 +128,6 @@ public class Animations : MonoBehaviour
 
     public void AttackDone()
     {
-        collider.isTrigger = true;
+        getWeaponCollider().isTrigger = true;
     }
 }

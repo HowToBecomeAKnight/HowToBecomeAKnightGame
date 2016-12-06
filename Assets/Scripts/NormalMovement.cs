@@ -13,26 +13,24 @@ public class NormalMovement : MonoBehaviour
     public float rotateSpeed = 5f;
     private float rotate = 0.0f;
 
-    GameObject weapon;
-
+    Character character;
 
     void Start()
     {
-        weapon = GameObject.FindWithTag("Weapon");
         controller = GetComponent<CharacterController>();
+        character = GetComponent<Character>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
-        if(weapon && !weapon.active)
+        if (character.GetCurrentWeapon && character.GetCurrentWeapon.activeSelf)
         {
-            movementSpeed = 25;
+            movementSpeed = 10;
         }
         else
         {
-            movementSpeed = 10;
+            movementSpeed = 25;
         }
 
         //for keyboard ---------------------------------------------------
