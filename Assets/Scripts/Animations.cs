@@ -12,9 +12,6 @@ public class Animations : MonoBehaviour
     GameObject weapon;
 
     public AudioSource swing;
-    public AudioSource walk;
-    public AudioSource run;
-    public AudioSource jump;
 
     // Use this for initialization
     void Start()
@@ -56,7 +53,6 @@ public class Animations : MonoBehaviour
         //Set speed to 1.0 when W is pressed
         if (Input.GetKey(KeyCode.W))//W
         {
-            walk.PlayDelayed(1);
             anim.SetFloat("Speed", 1);
         }
         //Set speed to -1 when S is pressed 
