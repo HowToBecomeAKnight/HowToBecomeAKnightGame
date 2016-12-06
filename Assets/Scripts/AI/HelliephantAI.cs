@@ -26,7 +26,7 @@ public class HelliephantAI : EnemyAI, EnemyInterface
 
     CapsuleCollider enemyCollider;
 
-    GameObject damageCollider;
+    CapsuleCollider damageCollider;
 
     float distanceToPlayer;
 
@@ -39,6 +39,8 @@ public class HelliephantAI : EnemyAI, EnemyInterface
     public GameObject clone1;
 
     public GameObject clone2;
+
+    public GameObject portal;
 
     private float damageWaitTime = 0.7f;
     #endregion
@@ -60,8 +62,8 @@ public class HelliephantAI : EnemyAI, EnemyInterface
     // Use this for initialization
     protected override void Start () {
         animator = GetComponent<Animator>();
-        enemyCollider = GameObject.FindGameObjectWithTag("Enemy").GetComponent<CapsuleCollider>();
-        damageCollider = GameObject.FindGameObjectWithTag("EnemyAttack");
+        enemyCollider = this.GetComponent<CapsuleCollider>();
+        damageCollider = this.GetComponentInChildren<CapsuleCollider>();
         rigidBody = GetComponent<Rigidbody>();
         currHealth = maxHealth;
         base.Start();
@@ -118,6 +120,18 @@ public class HelliephantAI : EnemyAI, EnemyInterface
                 Death();
             }
         }
+        else
+        {
+            if (!IsClone)
+            {
+                Player.GetComponent<Character>().finishedLevel = true;
+
+                if (Player.GetComponent<Character>().finishedLevel)
+                {
+                    ShowPortal();
+                }
+            }
+        }
 
         if (sinkEnemy)
         {
@@ -127,7 +141,6 @@ public class HelliephantAI : EnemyAI, EnemyInterface
 
     void RunAway()
     {
-        print("RUN AWAY");
         NavMesh.speed = 20.0f;
         animator.SetTrigger("Chase");
         MoveEnemy(chargeStart.transform.position);
@@ -135,7 +148,6 @@ public class HelliephantAI : EnemyAI, EnemyInterface
 
     void Charge()
     {
-        print("CHARGING");
         charging = true;
         NavMesh.speed = 15.0f;
         if (distanceToPlayer > 15)
@@ -183,7 +195,7 @@ public class HelliephantAI : EnemyAI, EnemyInterface
         this.gameObject.GetComponent<NavMeshAgent>().enabled = false;
         rigidBody.isKinematic = true;
         enemyCollider.isTrigger = true;
-        damageCollider.GetComponent<CapsuleCollider>().enabled = false;
+        damageCollider.enabled = false;
     }
 
     void OnCollisionEnter(Collision col)
@@ -220,6 +232,11 @@ public class HelliephantAI : EnemyAI, EnemyInterface
 
         // After 1.5 seconds destory the enemy.
         Destroy(gameObject, 1.5f);
+    }
+
+    public void ShowPortal()
+    {
+        portal.gameObject.SetActive(true);
     }
 
     //Changes the current stage of the helliephant boss fight

@@ -71,7 +71,6 @@ public class CompanionAI : MonoBehaviour {
 
     void CheckIfCompanionsFound()
     {
-        print(companionID);
         if (player.GetComponent<Character>().GetUnlockedCompanions[companionID])
         {
             print("Move Companion " + companionID);

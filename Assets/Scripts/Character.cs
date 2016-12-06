@@ -90,7 +90,7 @@ public class Character : MonoBehaviour {
             SetWeapon(2);
         }
 
-        if (finishedLevel)
+        if (finishedLevel && lever != null)
         {
             lever.transform.position = teleportToHere.transform.position;
         }
