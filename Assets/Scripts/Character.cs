@@ -11,7 +11,7 @@ public class Character : MonoBehaviour {
     static int CURR_WEAPON = 0;
     static bool[] UNLOCKED_WEAPONS = { true, false, false };
     static bool[] UNLOCKED_COMPANIONS = { false, false };
-
+    static bool[] COMPLETED_LEVELS = { false, false, false };
 
     private bool canTakeDamage = true;
 
@@ -25,6 +25,7 @@ public class Character : MonoBehaviour {
 
     private GameObject weaponsObject;
     private GameObject weaponsUIObject;
+    private GameObject currentWeapon;
 
     public bool finishedLevel = false;
 
@@ -58,6 +59,33 @@ public class Character : MonoBehaviour {
             UNLOCKED_COMPANIONS = value;
         }
     }
+
+    public bool[] GetCompletedLevels
+    {
+        get
+        {
+            return COMPLETED_LEVELS;
+        }
+
+        set
+        {
+            COMPLETED_LEVELS = value;
+        }
+    }
+
+    public GameObject GetCurrentWeapon
+    {
+        get
+        {
+            return this.currentWeapon;
+        }
+
+        set
+        {
+            this.currentWeapon = value;
+        }
+    }
+
     #endregion
 
     // Use this for initialization
@@ -91,7 +119,7 @@ public class Character : MonoBehaviour {
             SetWeapon(2);
         }
 
-        if (finishedLevel && lever != null)
+        if (COMPLETED_LEVELS[0])
         {
             lever.transform.position = teleportToHere.transform.position;
         }
@@ -173,9 +201,33 @@ public class Character : MonoBehaviour {
                 else
                 {
                     this.weaponsObject.transform.GetChild(i).gameObject.SetActive(true);
+                    currentWeapon = this.weaponsObject.transform.GetChild(i).gameObject;
                     this.weaponsUIObject.transform.GetChild(i).gameObject.GetComponent<Image>().color = new Color(1, 0, 0, 0.3f);
                 }
             }
+        }
+    }
+
+    public void FinishedLevel(int level)
+    {
+        if (level <= UNLOCKED_COMPANIONS.Length)
+        {
+            COMPLETED_LEVELS[level] = true;
+        }
+
+        if (level == 0)
+        {
+            print("Completed The Cave");
+        }
+
+        if (level == 1)
+        {
+            print("Completed the Dead Floating Islands");
+        }
+
+        if (level == 2)
+        {
+            print("Completed the ToyBox");
         }
     }
 
