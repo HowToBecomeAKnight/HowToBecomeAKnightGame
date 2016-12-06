@@ -96,8 +96,6 @@ public class RattleboneAI : SkeletonAI, EnemyInterface
         }
         else
         {
-            //Completion level 2 indicated in Character
-            player.GetComponent<Character>().FinishedLevel(1);
             player.GetComponent<Character>().finishedLevel = true;
         }
 

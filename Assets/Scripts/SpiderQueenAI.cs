@@ -92,8 +92,6 @@ public class SpiderQueenAI : SpiderAI, EnemyInterface
         }
         else
         {
-            //Completion of level one indicated in character
-            player.GetComponent<Character>().FinishedLevel(0);
             player.GetComponent<Character>().finishedLevel = true;
         }
     }
