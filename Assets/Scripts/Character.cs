@@ -12,6 +12,7 @@ public class Character : MonoBehaviour {
     static bool[] UNLOCKED_WEAPONS = { true, false, false };
     static bool[] UNLOCKED_COMPANIONS = { false, false };
 
+
     private bool canTakeDamage = true;
 
     private float damageWaitTime = 0.7f;

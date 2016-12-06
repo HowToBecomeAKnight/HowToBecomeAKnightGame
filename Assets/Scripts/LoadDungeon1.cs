@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class LoadDungeon1 : MonoBehaviour
 {
@@ -17,7 +18,7 @@ public class LoadDungeon1 : MonoBehaviour
         if (other.gameObject.tag == "Player")
         {
             Debug.Log("Load dungeon1");
-            Application.LoadLevel("dungeon1");
+            SceneManager.LoadScene("dungeon1");
         }
     }
 }
