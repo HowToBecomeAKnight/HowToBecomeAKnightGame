@@ -8,6 +8,7 @@ public class leverOpenToyBox : MonoBehaviour {
     private bool colliding = false;
     public GameObject toybox;
     Collider lidCollider;
+    public AudioSource openLever;
 
     // Use this for initialization
     void Start()
@@ -32,6 +33,7 @@ public class leverOpenToyBox : MonoBehaviour {
             Debug.Log("open toybox");
             colliding = false;
             lidCollider.enabled = false;
+            openLever.PlayDelayed((float)(0.4));
         }
 
     }
