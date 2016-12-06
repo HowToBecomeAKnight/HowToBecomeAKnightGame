@@ -124,6 +124,7 @@ public class HelliephantAI : EnemyAI, EnemyInterface
         {
             if (!IsClone)
             {
+                Player.GetComponent<Character>().FinishedLevel(2);
                 Player.GetComponent<Character>().finishedLevel = true;
 
                 if (Player.GetComponent<Character>().finishedLevel)
