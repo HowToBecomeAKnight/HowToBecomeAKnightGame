@@ -7,6 +7,8 @@ public class leverOpenGate : MonoBehaviour {
     Animation gateAnim;
     private bool colliding = false;
     public GameObject gate;
+    public AudioSource openGate;
+    public AudioSource openLever;
 
     // Use this for initialization
     void Start() {
@@ -23,6 +25,8 @@ public class leverOpenGate : MonoBehaviour {
 
         if (Input.GetKey(KeyCode.F) && colliding)//if f is pressed and objects are colliding
         {
+            openLever.PlayDelayed((float)(0.7));
+            openGate.Play();
             anim.Play("pullLever");//play lever animation
             Debug.Log("play pull lever");
             gateAnim.Play("move_gate");//move gate animation

@@ -6,6 +6,7 @@ public class leverFireStop : MonoBehaviour {
     Animation anim;
     Animation gateAnim;
     private bool colliding = false;
+    public AudioSource fire;
  
     public GameObject fireTrap;
     Collider col;
@@ -16,6 +17,7 @@ public class leverFireStop : MonoBehaviour {
 
         anim = GetComponent<Animation>();
         col = fireTrap.GetComponent<BoxCollider>();
+        fire = fireTrap.GetComponent<AudioSource>();
 
     }
 
@@ -31,6 +33,7 @@ public class leverFireStop : MonoBehaviour {
             colliding = false;
             col.enabled = false;
             fireTrap.GetComponentInChildren<ParticleSystem>().Stop();
+            fire.mute = true;
         }
 
     }

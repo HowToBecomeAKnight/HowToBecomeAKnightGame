@@ -7,6 +7,7 @@ public class HealthPotionLogic : MonoBehaviour
     private bool colliding = false;
 
     private Character player;
+   
 
     // Use this for initialization
     void Start()
@@ -21,6 +22,7 @@ public class HealthPotionLogic : MonoBehaviour
 
         if (Input.GetKey(KeyCode.G) && colliding)//if f is pressed and objects are colliding
         {
+        
             player.AddHealth(0.5f);
             colliding = false;
             //Item picked up, becomes deactivated
