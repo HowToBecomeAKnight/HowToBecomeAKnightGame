@@ -9,6 +9,7 @@ public class leverOpenFinalPortal : MonoBehaviour {
     private bool finished;
     public GameObject portal;
     public GameObject portalGlow;
+    public AudioSource leverPull;
 
     private MeshRenderer rend1;
     private MeshRenderer rend;//this script will make the invisible finish portal appear when it is pulled
@@ -41,6 +42,7 @@ public class leverOpenFinalPortal : MonoBehaviour {
             rend1.enabled = true;
             Debug.Log("make portal appear");
             colliding = false;
+            leverPull.PlayDelayed((float)(0.4));
         }
 
     }

@@ -6,7 +6,7 @@ public class leverOpenGate : MonoBehaviour {
     Animation anim;
     Animation gateAnim;
     private bool colliding = false;
-    public GameObject gate;
+    public GameObject metalGate;
     public AudioSource openGate;
     public AudioSource openLever;
 
@@ -14,8 +14,8 @@ public class leverOpenGate : MonoBehaviour {
     void Start() {
 
         anim = GetComponent<Animation>();
-        gate = GameObject.FindGameObjectWithTag("Gate");
-        gateAnim = gate.GetComponent<Animation>();
+        metalGate = GameObject.FindGameObjectWithTag("Gate");
+        gateAnim = metalGate.GetComponent<Animation>();
 
     }
 
