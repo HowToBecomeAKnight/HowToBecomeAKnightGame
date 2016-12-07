@@ -13,7 +13,7 @@ public class Menu : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        if (!character.GetComponent<Character>().GetShowMenu)
+        if (!character.GetComponent<Character>().GetShowMenu || UnityEngine.VR.VRDevice.isPresent)
         {
             gameObject.SetActive(false);
             return;
