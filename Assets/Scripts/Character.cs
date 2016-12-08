@@ -16,6 +16,8 @@ public class Character : MonoBehaviour {
 
     private bool canTakeDamage = true;
 
+    private bool collidingWithEnemy;
+
     private float damageWaitTime = 0.7f;
 
     private GameObject player;
@@ -148,6 +150,13 @@ public class Character : MonoBehaviour {
         {
             checkPoint = GameObject.FindWithTag("StartSpawn").transform;
         }
+
+        if (collidingWithEnemy)
+        {
+            gameObject.GetComponent<NavMeshAgent>().enabled = true;
+        }
+        else
+            gameObject.GetComponent<NavMeshAgent>().enabled = false;
     }
 
     public void RemoveHealth(float amount)
@@ -247,7 +256,7 @@ public class Character : MonoBehaviour {
     {
         if(col.gameObject.CompareTag("Enemy"))
         {
-            gameObject.GetComponent<NavMeshAgent>().enabled = true;
+            collidingWithEnemy = true;
         }
 
         if (col.gameObject.CompareTag("EnemyAttack") && canTakeDamage)
@@ -268,7 +277,7 @@ public class Character : MonoBehaviour {
         {
             gameObject.GetComponent<NavMeshAgent>().enabled = true;
             print("PLAYER HIT");
-            RemoveHealth(.8f);
+            RemoveHealth(1f);
             StartCoroutine(damageDelay());
         }
 
@@ -314,7 +323,7 @@ public class Character : MonoBehaviour {
     {
         if (col.gameObject.CompareTag("Enemy"))
         {
-            gameObject.GetComponent<NavMeshAgent>().enabled = false;
+            collidingWithEnemy = false;
         }
 
     }

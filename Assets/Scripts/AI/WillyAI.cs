@@ -22,16 +22,18 @@ public class WillyAI : MonoBehaviour
 
     private bool playOnce;
 
-    private string[] startGameDialog = { "Oi!", "So you're here to become a knight Morpheus?", "Of course you are!", "My basement has a terrible spider infestation.", "Clear that up for me would you?", "Good lad!" };
+    private bool voicePlayed = false;
 
-    private string[] levelOneCompletedDialog = { "Back so soon?", "I suppose you want to become a knight now?", "WELL TOO BAD!", "I still have some chores that need doing!", "My old vacation spot has been taken over by one of my creations.",
+    private string[] startGameDialog = { "Press 'G' to continue through dialog to open portal 1..","Oi!", "So you're here to become a knight Morpheus?", "Of course you are!", "My basement has a terrible spider infestation.", "Clear that up for me would you?", "Good lad!" };
+
+    private string[] levelOneCompletedDialog = {  "Press 'G' to continue through dialog to open portal 2..", "Back so soon?", "I suppose you want to become a knight now?", "WELL TOO BAD!", "I still have some chores that need doing!", "My old vacation spot has been taken over by one of my creations.",
         "I think I deserve a nice vacation, don't you?", "Go clear out the rabble please.", "Cheerio!" };
 
-    private string[] levelTwoCompletedDialog = { "Did you bring me a souvenir?", "Oh.....", "Well I guess that means SOMEONE doesn’t get to become a knight.", "You know, I miss my childhood toy, Ellie.", "I think you should bring her to me.",
+    private string[] levelTwoCompletedDialog = {  "Press 'G' to continue through dialog to open portal 3..", "Did you bring me a souvenir?", "Oh.....", "Well I guess that means SOMEONE doesn’t get to become a knight.", "You know, I miss my childhood toy, Ellie.", "I think you should bring her to me.",
     "UNHARMED, please.", "I’ll just send you over to my old house...", "You aren’t afraid of time travel are you?", "Well, too late to think of that now..", "TA TA!"};
 
-    private string[] levelThreeCompletedDialog = { "Did you find Ellie?!", "You killed her?", "Why...why would you do that?", "Oh, she attacked you? Well she always was spirited.", "I suppose I should make you a knight now…", "Buut I still have more chores that need doing!"
-    , "I think you're going to be hanging around for a while… that is if you want to become a knight!", "HO HO, HA HA!"};
+    private string[] levelThreeCompletedDialog = {  "Press 'G' to continue through dialog..", "Did you find Ellie?!", "You killed her?", "Why...why would you do that?", "Oh, she attacked you? Well she always was spirited.", "I suppose I should make you a knight now…", "Buut I still have more chores that need doing!"
+    , "I think you're going to be hanging around for a while… that is if you want to become a knight!", "HO HO, HA HA!", "Game Complete! Thanks for playing :)" };
 
     private GameObject portal1;
 
@@ -40,6 +42,13 @@ public class WillyAI : MonoBehaviour
     private GameObject portal3;
 
     private GameObject portalToOpen;
+
+    public AudioSource startGameVoice;
+    public AudioSource levelOneCompleteVoice;
+    public AudioSource levelTwoCompleteVoice;
+    public AudioSource levelThreeCompleteVoice;
+
+    private AudioSource voice;
 
 
     void Awake()
@@ -74,6 +83,7 @@ public class WillyAI : MonoBehaviour
             dialog.messages = startGameDialog;
             portalToOpen = portal1;
             dialog.NextMessage();
+            voice = startGameVoice;
         }
 
         if (completedLevelOne && !completedLevelTwo && !completedLevelThree)
@@ -81,6 +91,7 @@ public class WillyAI : MonoBehaviour
             dialog.messages = levelOneCompletedDialog;
             portalToOpen = portal2;
             dialog.NextMessage();
+            voice = levelOneCompleteVoice;
         }
 
         if (completedLevelOne && completedLevelTwo && !completedLevelThree)
@@ -88,6 +99,7 @@ public class WillyAI : MonoBehaviour
             dialog.messages = levelTwoCompletedDialog;
             portalToOpen = portal3;
             dialog.NextMessage();
+            voice = levelTwoCompleteVoice;
         }
 
         if (completedLevelOne && completedLevelTwo && completedLevelThree)
@@ -95,6 +107,7 @@ public class WillyAI : MonoBehaviour
             completedGame = true;
             dialog.messages = levelThreeCompletedDialog;
             dialog.NextMessage();
+            voice = levelThreeCompleteVoice;
         }
     }
 
@@ -110,6 +123,13 @@ public class WillyAI : MonoBehaviour
                 {
                     anim.SetTrigger("Talking");
                     dialog.NextMessage();
+
+                    //plays voice only once
+                    if (!voice.isPlaying && !voicePlayed)
+                    {
+                        voice.Play();
+                        voicePlayed = true;
+                    }
                 }
             }
         }

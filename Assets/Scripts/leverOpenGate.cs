@@ -32,6 +32,7 @@ public class leverOpenGate : MonoBehaviour {
             gateAnim.Play("move_gate");//move gate animation
             Debug.Log("move gate");
             colliding = false;
+
         }
 
     }
